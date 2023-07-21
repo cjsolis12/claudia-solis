@@ -1,9 +1,9 @@
-import { useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { Container } from "@mui/system";
 
 //Components
-// import Navbar from "./components/layout/Navbar"
+import Navbar from "./components/layout/Navbar"
 
 // Main Pages
 import Home from "./pages/Home";
@@ -12,13 +12,17 @@ import Work from "./pages/Work";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 
+
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
     <>
-      <div>
-        <h1>Claudia</h1>
+      <Container
+        maxWidth="lg"
+        sx={{ marginTop: 2, marginLeft: 2, marginRight: 2, border:2}}
+      >
+        <Navbar/>
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="about" element={<About />} />
@@ -26,7 +30,7 @@ function App() {
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
-      </div>
+      </Container>
     </>
   );
 }
