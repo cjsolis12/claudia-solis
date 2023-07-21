@@ -1,9 +1,9 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Container } from "@mui/system";
+import { Box } from "@mui/system";
 
 //Components
-import Navbar from "./components/layout/Navbar"
+import Navbar from "./components/layout/Navbar";
 
 // Main Pages
 import Home from "./pages/Home";
@@ -12,17 +12,16 @@ import Work from "./pages/Work";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 
-
 function App() {
-
-
   return (
     <>
-      <Container
-        maxWidth="lg"
-        sx={{ marginTop: 2, marginLeft: 2, marginRight: 2, border:2}}
+      <Box
+        width={1} // set width to 100% of parent
+        boxSizing="border-box" // include border and padding in width
+        height="100vh"
+        sx={{ border: 2 }}
       >
-        <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="about" element={<About />} />
@@ -30,7 +29,7 @@ function App() {
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
-      </Container>
+      </Box>
     </>
   );
 }
