@@ -2,11 +2,13 @@ import * as React from 'react';
 import { useHoveredNavLinkContext } from '../components/ui/HoveredNavLinkContext';
 import { Box } from "@mui/system";
 
-import image1 from "../assets/fierce.jpg";
-import image2 from "../assets/hello.jpg"
+import about from "../assets/me1.jpg";
+import work from "../assets/fierce.jpg";
+import contact from "../assets/hello.jpg"
+import resume from "../assets/resume.jpg"
 
 export default function Home() {
-  const [headerImage, setHeaderImage] = React.useState(image1);
+  const [headerImage, setHeaderImage] = React.useState(work);
   const {hoveredNavLink } = useHoveredNavLinkContext();
 
   React.useEffect(() => {
@@ -14,19 +16,19 @@ export default function Home() {
     console.log("hovered Navlink", hoveredNavLink);
     switch (hoveredNavLink) {
       case "about":
-        setHeaderImage(image1);
+        setHeaderImage(about);
         break;
       case "work":
-        setHeaderImage(image1);
+        setHeaderImage(work);
         break;
       case "resume":
-        setHeaderImage(image1);
+        setHeaderImage(resume);
         break;
       case "contact":
-        setHeaderImage(image2);
+        setHeaderImage(contact);
         break;
       default:
-        setHeaderImage(image2);
+        setHeaderImage(work);
         break;
     }
   }, [hoveredNavLink]);

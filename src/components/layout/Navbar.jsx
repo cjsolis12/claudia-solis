@@ -20,6 +20,7 @@ export default function Navbar() {
   };
 
   return (
+    <div className="navbar">
     <Box
       sx={{
         display: "flex",
@@ -83,5 +84,6 @@ export default function Navbar() {
         </NavLink>
       </Box>
     </Box>
+    </div>
   );
 }

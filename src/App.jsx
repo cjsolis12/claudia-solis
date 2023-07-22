@@ -16,8 +16,8 @@ function App() {
   return (
     <>
       <Box
-        width={1} // set width to 100% of parent
-        boxSizing="border-box" // include border and padding in width
+        width={1} 
+        boxSizing="border-box"
         height="100vh"
         sx={{ border: 2 }}
       >
