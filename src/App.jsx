@@ -4,6 +4,7 @@ import { Box, Container } from "@mui/system";
 
 //Components
 import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 
 // Main Pages
 import Home from "./pages/Home";
@@ -32,6 +33,7 @@ function App() {
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
+        <Footer/>
       </Container>
      
     </>
