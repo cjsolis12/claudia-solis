@@ -1,6 +1,7 @@
-
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Box } from "@mui/system";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 
 
 export default function Footer() {
@@ -29,20 +30,20 @@ export default function Footer() {
         to="/about" 
         activeClassName="active-link"
         >
-          GitHub
+          <HiOutlineMail/>
         </NavLink>
         <NavLink 
         to="/work" 
         activeClassName="active-link"
      
         >
-         LinkedIn
+        <FaGithub/>
         </NavLink>
         <NavLink 
         to="/contact" 
         activeClassName="active-link"
         >
-          Email
+          <FaLinkedinIn/>
         </NavLink>
       </Box>
     </Box>
