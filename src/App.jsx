@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Box } from "@mui/system";
+import { Box, Container } from "@mui/system";
 
 //Components
 import Navbar from "./components/layout/Navbar";
@@ -12,11 +12,14 @@ import Work from "./pages/Work";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 
+
 function App() {
   return (
     <>
-      <Box
-        width={1} 
+   
+      <Container
+        
+        maxWidth="xl"
         boxSizing="border-box"
         height="100vh"
         sx={{ border: 2 }}
@@ -29,7 +32,8 @@ function App() {
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
-      </Box>
+      </Container>
+     
     </>
   );
 }

@@ -23,12 +23,13 @@ body {
   height: auto;
 }
 
-.navbar{
-  position: fixed;
+/* .navbar{
+  position: absolute;
   z-index: 1;
   display: flex;
   justify-content: space-between;
-}
+  max-width: 100vw;
+} */
 
 
 
