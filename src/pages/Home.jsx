@@ -33,8 +33,12 @@ export default function Home() {
   console.log("headerImage", headerImage);
 
   return (
-    <Box>
-       <img src={headerImage} alt="Header Image" className=''/>
+    <Box  sx={{
+     display: "flex", 
+     alignItems: "center",
+     height: "100vh"
+    }}>
+       <img src={headerImage} alt="Header Image" className='header-images'/>
     </Box>
   );
 }
