@@ -11,8 +11,8 @@ export default function Navbar() {
   const { setHoveredNavLink } = useHoveredNavLinkContext();
 
   
-  const handleMouseEnter = (navLink) => {
-    setHoveredNavLink(navLink);
+  const handleMouseEnter = (navLinkName) => {
+    setHoveredNavLink(navLinkName);
   };
 
   const handleMouseLeave = () => {
@@ -34,7 +34,7 @@ export default function Navbar() {
         exact
         activeClassName="active-link"
         sx={{ marginRight: "1rem",  textDecoration: isHomePage && isHovered ? "underline" : "none", }}
-        onMouseEnter={handleMouseEnter}
+        onMouseEnter={() => handleMouseEnter("/")}
         onMouseLeave={handleMouseLeave}
       >
         <h2>Claudia Solis</h2>
@@ -52,7 +52,7 @@ export default function Navbar() {
         <NavLink 
         to="/about" 
         activeClassName="active-link"
-        onMouseEnter={handleMouseEnter}
+        onMouseEnter={() => handleMouseEnter("about")}
         onMouseLeave={handleMouseLeave}
         >
           About
@@ -60,7 +60,7 @@ export default function Navbar() {
         <NavLink 
         to="/work" 
         activeClassName="active-link"
-        onMouseEnter={handleMouseEnter}
+        onMouseEnter={() => handleMouseEnter("work")}
         onMouseLeave={handleMouseLeave}
         >
           Work
@@ -68,7 +68,7 @@ export default function Navbar() {
         <NavLink 
         to="/resume" 
         activeClassName="active-link"
-        onMouseEnter={handleMouseEnter}
+        onMouseEnter={() => handleMouseEnter("resume")}
         onMouseLeave={handleMouseLeave}
         >
           Resume
@@ -76,7 +76,7 @@ export default function Navbar() {
         <NavLink 
         to="/contact" 
         activeClassName="active-link"
-        onMouseEnter={handleMouseEnter}
+        onMouseEnter={() => handleMouseEnter("contact")}
         onMouseLeave={handleMouseLeave}
         >
           Contact

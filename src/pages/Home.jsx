@@ -1,37 +1,40 @@
 import * as React from 'react';
 import { useHoveredNavLinkContext } from '../components/ui/HoveredNavLinkContext';
+import { Box } from "@mui/system";
 
+import image1 from "../assets/fierce.jpg";
+import image2 from "../assets/hello.jpg"
 
 export default function Home() {
-  const [headerImage, setHeaderImage] = React.useState("../assets/me1.png");
+  const [headerImage, setHeaderImage] = React.useState(image1);
   const {hoveredNavLink } = useHoveredNavLinkContext();
 
   React.useEffect(() => {
     // Use a switch statement to set the header image based on the hoveredNavLink
+    console.log("hovered Navlink", hoveredNavLink);
     switch (hoveredNavLink) {
       case "about":
-        setHeaderImage("../me1.jpg");
+        setHeaderImage(image1);
         break;
       case "work":
-        setHeaderImage("../assets/fierce.jpg");
+        setHeaderImage(image1);
         break;
       case "resume":
-        setHeaderImage("../assets/fierce.jpg");
+        setHeaderImage(image1);
         break;
       case "contact":
-        setHeaderImage("../assets/fierce.jpg");
+        setHeaderImage(image2);
         break;
       default:
-        setHeaderImage("./assets/me2.jpg");
+        setHeaderImage(image2);
         break;
     }
-
-    console.log("hovered Navlink", hoveredNavLink)
   }, [hoveredNavLink]);
+  console.log("headerImage", headerImage);
 
   return (
-    <div>
-       <img src={headerImage} alt="Header Image" />
-    </div>
+    <Box>
+       <img src={headerImage} alt="Header Image" className=''/>
+    </Box>
   );
 }
