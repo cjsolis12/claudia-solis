@@ -32,7 +32,7 @@ export default function Work() {
             style={{  height: "300px", width: "200px" }}
           >
             <motion.div
-              style={{ position: "relative", overflow: "hidden", width: "100%", height: "100%"}}
+              style={{ position: "relative", overflow: "hidden", width: "100%", height: "100%", backgroundColor: "teal"}}
               onHoverStart={handleHover}
               onHoverEnd={handleHoverEnd}
             >
