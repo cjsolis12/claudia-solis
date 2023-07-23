@@ -40,15 +40,12 @@ export default function Work() {
                 src={item.img}
                 alt={item.alt}
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                animate={{ scale: 1 }}
-                initial={{ scale: 0.8 }}
-                whileHover={{ scale: 1.3 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
               />
 
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={controls}
+                transition={{ type: "tween", duration: 0.3, delay: 0.1 }}
                 style={{
                   position: "absolute",
                   bottom: 0,
@@ -58,30 +55,49 @@ export default function Work() {
                   padding: "8px",
                 }}
               >
-                <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center"  }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
                   <Typography variant="subtitle1" style={{ color: "#fff" }}>
                     {item.title}
                   </Typography>
-                  <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center"  }}>
+                </Box>
+              </motion.div>
+
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={controls}
+                transition={{ type: "tween", duration: 0.7, delay: 0.1 }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row-reverse",
+                    alignItems: "center",
+                  }}
+                >
                   <IconButton
-                  href={item.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#fff" }}
-                >
-                  <GitHubIcon />
-                </IconButton>
-                <IconButton
-                  href={item.websiteLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#fff" }}
-                >
-                  <InsertLinkIcon />
-                </IconButton>
+                    href={item.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#fff" }}
+                  >
+                    <GitHubIcon />
+                  </IconButton>
+                  <IconButton
+                    href={item.websiteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#fff" }}
+                  >
+                    <InsertLinkIcon />
+                  </IconButton>
                 </Box>
-                </Box>
-            
               </motion.div>
             </motion.div>
           </Grid>
