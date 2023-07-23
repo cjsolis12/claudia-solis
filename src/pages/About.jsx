@@ -7,10 +7,7 @@ import { RevealLeft } from "../animations/RevealLeft";
 
 export default function About() {
   return (
-    <Grid
-      container
-      spacing={8}
-    >
+    <Grid container spacing={8}>
       {/* first row */}
 
       <Grid item xs={12} sm={6}>
@@ -26,9 +23,8 @@ export default function About() {
       <Grid item xs={12} sm={6}>
         <RevealRight>
           <Typography variant="h6">
-            I made the decision to pursue a career in tech after trying the
-            beauty industry as an esthetician and the education field as a
-            teacher.
+            With a passion for learning and creativity, I made the leap from
+            esthetician to teacher, nurturing minds along the way.
           </Typography>
         </RevealRight>
       </Grid>
@@ -38,10 +34,13 @@ export default function About() {
       <Grid item xs={12} sm={6}>
         {/* Text on the right */}
         <RevealLeft>
-          <Paper style={{ height: "20vh", background: "" }}>
-            {/* Add text component here */}
-            <Typography variant="h6">Text here</Typography>
-          </Paper>
+          {/* Add text component here */}
+          <Typography variant="h6">
+            But it was in the tech industry where I found my true calling,
+            embracing innovation, challenges, and opportunities. I am excited to
+            keep pushing myself to new heights, expanding my skills, and making a
+            meaningful impact in the tech world.{" "}
+          </Typography>
         </RevealLeft>
       </Grid>
 
