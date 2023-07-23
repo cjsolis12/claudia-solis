@@ -22,7 +22,7 @@ export default function Work() {
 
   return (
     <>
-      <Grid container spacing={6}>
+      <Grid container spacing={6} justifyContent="center">
         {projectData.map((item) => (
           <Grid
             item
@@ -80,6 +80,7 @@ export default function Work() {
                     display: "flex",
                     flexDirection: "row-reverse",
                     alignItems: "center",
+                    zIndex: "10",
                   }}
                 >
                   <IconButton
