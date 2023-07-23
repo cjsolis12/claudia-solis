@@ -1,7 +1,9 @@
 import * as React from "react";
-import { Grid, Paper, Typography } from "@mui/material";
+import { Grid, Typography, Box, IconButton } from "@mui/material";
 import projectData from "../data/ProjectData";
 import { motion, useAnimation } from "framer-motion";
+import { GitHub as GitHubIcon } from "@mui/icons-material";
+import { Link as InsertLinkIcon } from "@mui/icons-material";
 
 export default function Work() {
   const controls = useAnimation();
@@ -14,15 +16,21 @@ export default function Work() {
     });
   };
 
-  const handleHoverEnd = ()=> {
-    controls.start({y:20, opacity: 0})
-  }
+  const handleHoverEnd = () => {
+    controls.start({ y: 20, opacity: 0 });
+  };
 
   return (
     <>
       <Grid container spacing={4}>
         {projectData.map((item) => (
-          <Grid item xs={12} sm={6} key={item.id} style={{ height: "50%", height: "50%"}}>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            key={item.id}
+            style={{ height: "50%", height: "50%" }}
+          >
             <motion.div
               style={{ position: "relative", overflow: "hidden" }}
               onHoverStart={handleHover}
@@ -34,7 +42,7 @@ export default function Work() {
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
                 animate={{ scale: 1 }}
                 initial={{ scale: 0.8 }}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.3 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               />
 
@@ -50,10 +58,30 @@ export default function Work() {
                   padding: "8px",
                 }}
               >
-                <Typography variant="subtitle1" style={{ color: "#fff" }}>
-                  {item.title}
-                </Typography>
-                {/* Add your icons here with desired animations */}
+                <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center"  }}>
+                  <Typography variant="subtitle1" style={{ color: "#fff" }}>
+                    {item.title}
+                  </Typography>
+                  <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center"  }}>
+                  <IconButton
+                  href={item.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#fff" }}
+                >
+                  <GitHubIcon />
+                </IconButton>
+                <IconButton
+                  href={item.websiteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#fff" }}
+                >
+                  <InsertLinkIcon />
+                </IconButton>
+                </Box>
+                </Box>
+            
               </motion.div>
             </motion.div>
           </Grid>
