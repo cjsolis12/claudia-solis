@@ -1,7 +1,7 @@
 import React, {useEffect, useRef } from "react";
 import {motion, useInView, useAnimation } from "framer-motion"
 
-const Reveal = ({ children}) => {
+const RevealRight = ({ children}) => {
     return (
         <motion.div
           variants={{
@@ -17,4 +17,4 @@ const Reveal = ({ children}) => {
     );
   };
   
-  export {Reveal};
+  export {RevealRight};
