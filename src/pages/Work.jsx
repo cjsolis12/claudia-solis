@@ -12,7 +12,7 @@ export default function Work() {
     controls.start({
       y: 0,
       opacity: 1,
-      transition: { type: "tween", duration: 0.3, delay: 0.1 },
+      transition: { duration: 0.5, delay: 0.25 },
     });
   };
 
@@ -45,7 +45,7 @@ export default function Work() {
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={controls}
-                transition={{ type: "tween", duration: 0.3, delay: 0.1 }}
+                transition={{ duration: 0.3, delay: 0.25 }}
                 style={{
                   position: "absolute",
                   bottom: 0,
