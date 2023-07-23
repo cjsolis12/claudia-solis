@@ -13,10 +13,10 @@ import contactForm from "../assets/contactForm.jpg"
 export default function Contact() {
   return (
     <Grid container spacing={4}>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={4}>
         <img src={contactForm} alt="contact" style={{ width: "100%", height: "100%", objectFit: "cover"  }} />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={4}>
         <Paper
           elevation={3}
           sx={{

@@ -22,24 +22,24 @@ export default function Work() {
 
   return (
     <>
-      <Grid container spacing={4}>
+      <Grid container spacing={6}>
         {projectData.map((item) => (
           <Grid
             item
             xs={12}
             sm={6}
             key={item.id}
-            style={{ height: "50%", height: "50%" }}
+            style={{  height: "400px", width: "400px" }}
           >
             <motion.div
-              style={{ position: "relative", overflow: "hidden" }}
+              style={{ position: "relative", overflow: "hidden", width: "100%", height: "100%"}}
               onHoverStart={handleHover}
               onHoverEnd={handleHoverEnd}
             >
               <motion.img
                 src={item.img}
                 alt={item.alt}
-                style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                style={{ width: "100%", height: "100%", objectFit: "cover"}}
               />
 
               <motion.div
@@ -48,6 +48,7 @@ export default function Work() {
                 transition={{ duration: 0.3, delay: 0.25 }}
                 style={{
                   position: "absolute",
+                  zIndex: "10",
                   bottom: 0,
                   left: 0,
                   width: "100%",
