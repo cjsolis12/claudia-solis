@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { Grid, Typography, Box, IconButton } from "@mui/material";
 import projectData from "../data/ProjectData";
 import { motion, useAnimation } from "framer-motion";
@@ -6,24 +7,21 @@ import { GitHub as GitHubIcon } from "@mui/icons-material";
 import { Link as InsertLinkIcon } from "@mui/icons-material";
 
 export default function Work() {
-  const controls = useAnimation();
+  const [hoveredIndex, setHoveredIndex] = React.useState(null)
+ 
 
-  const handleHover = () => {
-    controls.start({
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5, delay: 0.25 },
-    });
+  const handleHoverStart = (index) => {
+  setHoveredIndex(index)
   };
 
   const handleHoverEnd = () => {
-    controls.start({ y: 20, opacity: 0 });
+   setHoveredIndex(null)
   };
 
   return (
     <>
       <Grid container spacing={6} justifyContent="center">
-        {projectData.map((item) => (
+        {projectData.map((item, index) => (
           <Grid
             item
             xs={12}
@@ -32,8 +30,8 @@ export default function Work() {
             style={{  height: "300px", width: "200px" }}
           >
             <motion.div
-              style={{ position: "relative", overflow: "hidden", width: "100%", height: "100%", backgroundColor: "teal"}}
-              onHoverStart={handleHover}
+              style={{ position: "relative", overflow: "hidden", width: "100%", height: "100%"}}
+              onHoverStart={() => handleHoverStart(index)}
               onHoverEnd={handleHoverEnd}
             >
               <motion.img
@@ -44,7 +42,7 @@ export default function Work() {
 
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
-                animate={controls}
+                animate={hoveredIndex === index ? {y:0, opacity:1} : {y:20, opacity:0}}
                 transition={{ duration: 0.3, delay: 0.25 }}
                 style={{
                   position: "absolute",
@@ -72,7 +70,7 @@ export default function Work() {
 
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
-                animate={controls}
+                animate={hoveredIndex === index ? {y:0, opacity:1} : {y:20, opacity:0}}
                 transition={{ type: "tween", duration: 0.7, delay: 0.1 }}
               >
                 <Box
