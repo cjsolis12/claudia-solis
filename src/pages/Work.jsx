@@ -47,6 +47,7 @@ export default function Work() {
                   maxHeightheight: "100%",
                   objectFit: "cover",
                   objectPosition: "center",
+                  filter: hoveredIndex === index ? "blur(5px)" : "none",
                 }}
               />
               <motion.div
@@ -56,7 +57,7 @@ export default function Work() {
                     ? { y: 0, opacity: 1 }
                     : { y: -20, opacity: 0 }
                 }
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 style={{
                   position: "absolute",
                   zIndex: "10",
@@ -69,7 +70,7 @@ export default function Work() {
               >
                 <Typography
                   variant="subtitle1"
-                  style={{ color: "#fff", fontSize: "15px" }}
+                  style={{ color: "#fff", fontSize: "15px", textAlign: "center"  }}
                 >
                   {item.description}
                 </Typography>
