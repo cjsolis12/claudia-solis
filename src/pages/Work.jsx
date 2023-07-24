@@ -30,7 +30,7 @@ export default function Work() {
             style={{ height: "300px", width: "200px" }}
           >
             <motion.div
-              style={{ position: "relative", overflow: "hidden", width: "100%", height: "100%", boxShadow: "8px 8px 7px -2px rgba(151, 155, 154, 1)"}}
+              style={{ position: "relative", overflow: "hidden", width: "100%", height: "100%", boxShadow: "6px 6px 7px -2px rgba(151, 155, 154, 1)"}}
               onHoverStart={() => handleHoverStart(index)}
               onHoverEnd={handleHoverEnd}
             >
