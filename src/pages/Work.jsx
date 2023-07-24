@@ -61,16 +61,14 @@ export default function Work() {
                 style={{
                   position: "absolute",
                   zIndex: "10",
-                  top: 0,
-                  right: 0,
-                  width: "100%",
-                  background: "rgba(0, 0, 0, 0.7)",
-                  padding: "4px",
+                  top: "30px",
+                  background: "none",
+                  padding: "7px",
                 }}
               >
                 <Typography
                   variant="subtitle1"
-                  style={{ color: "#fff", fontSize: "15px", textAlign: "center"  }}
+                  style={{ color: "#fff", fontSize: "18px", textAlign: "center"  }}
                 >
                   {item.description}
                 </Typography>
