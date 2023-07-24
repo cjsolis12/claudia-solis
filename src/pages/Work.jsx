@@ -50,6 +50,20 @@ export default function Work() {
                   filter: hoveredIndex === index ? "blur(5px)" : "none",
                 }}
               />
+              {/* overlay on image hover */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={hoveredIndex === index ? { opacity: 0.6 } : { opacity: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "black"
+                }}
+              />
               <motion.div
                 initial={{ y: -60, opacity: 0 }}
                 animate={
@@ -68,7 +82,7 @@ export default function Work() {
               >
                 <Typography
                   variant="subtitle1"
-                  style={{ color: "#fff", fontSize: "18px", textAlign: "center"  }}
+                  style={{ color: "#fff", fontSize: "20px", textAlign: "center" }}
                 >
                   {item.description}
                 </Typography>
