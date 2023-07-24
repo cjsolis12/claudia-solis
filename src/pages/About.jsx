@@ -21,7 +21,7 @@ export default function About() {
                   
                 }}>Hi, I'm Claudia Solis! A fullstack developer in the making.</h1>
 
-          <Typography variant="h6" style={{ textAlign: "left", fontSize:"20px" }}>
+          <Typography variant="h6" style={{ textAlign: "left", fontSize:"20px", fontWeight: "100" }}>
             With a passion for learning and creativity, I made the leap from
             esthetician to teacher, nurturing minds along the way.
           </Typography>
@@ -46,7 +46,7 @@ export default function About() {
             </Grid>
 
             <Grid item xs={12}>
-              <Typography variant="h6">
+              <Typography variant="h6" style={{ textAlign: "left", fontSize:"18px", fontWeight: "lighter"}}>
                 But it was in the tech industry where I found my true calling,
                 embracing innovation, challenges, and opportunities. I am
                 excited to keep pushing myself to new heights, expanding my
