@@ -15,7 +15,7 @@ export default function About() {
           <img
             src={image2}
             alt="personal photo"
-            style={{ width: "100%", height: "80%", objectFit: "contain" }}
+            style={{ width: "100%", height: "80%", objectFit: "contain", boxShadow: "6px 6px 7px -2px rgba(151, 155, 154, 1)" }}
           ></img>
         </RevealLeft>
       </Grid>
@@ -49,7 +49,7 @@ export default function About() {
           <img
             src={image1}
             alt="personal photo"
-            style={{ width: "100%", height: "80%", objectFit: "contain" }}
+            style={{ width: "100%", height: "80%", objectFit: "contain", boxShadow: "6px 6px 7px -2px rgba(151, 155, 154, 1)" }}
           ></img>
         </RevealRight>
       </Grid>
