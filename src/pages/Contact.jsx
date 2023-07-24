@@ -11,6 +11,7 @@ import contactForm from "../assets/contactForm.jpg";
 
 export default function Contact() {
   return (
+   
     <Paper
       elevation={3}
       sx={{
@@ -18,7 +19,8 @@ export default function Contact() {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        width: 700
+        height: "100vh"
+
       }}
     >
       <img
@@ -31,9 +33,9 @@ export default function Contact() {
         sx={{
           display: "flex",
           flexDirection: "column",
+          justifyContent: "center",
           alignItems: "center",
           margin: "15px",
-          padding: "20px",
           "& .MuiTextField-root": { m: 1, width: "25ch" },
         }}
         noValidate
