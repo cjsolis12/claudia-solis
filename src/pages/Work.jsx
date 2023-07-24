@@ -43,7 +43,7 @@ export default function Work() {
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={hoveredIndex === index ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
-                transition={{ duration: 0.3, delay: 0.25 }}
+                transition={{ duration: 0.5, delay: 0.30 }}
                 style={{
                   position: "absolute",
                   zIndex: "10",
@@ -51,7 +51,7 @@ export default function Work() {
                   left: 0,
                   width: "100%",
                   background: "rgba(0, 0, 0, 0.7)",
-                  padding: "8px",
+                  padding: "4px",
                 }}
               >
                 <Box
@@ -61,9 +61,11 @@ export default function Work() {
                     flexDirection: "row",
                     justifyContent: "space-between",
                     alignItems: "center",
+                    marginRight: "30px",
+                    marginLeft: "30px",
                   }}
                 >
-                  <Typography variant="subtitle1" style={{ color: "#fff" }}>
+                  <Typography variant="subtitle1" style={{ color: "#fff", fontSize: "20px" }}>
                     {item.title}
                   </Typography>
                   <Box
