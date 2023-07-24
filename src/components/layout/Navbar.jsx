@@ -15,7 +15,7 @@ export default function Navbar() {
 
   // NavLinks
   const navLinks = [
-    { to: "/", text: "Claudia Solis", pageName: null },
+  
     { to: "/about", text: "About", pageName: "About Me" },
     { to: "/work", text: "Work", pageName: "My Work" },
     { to: "/resume", text: "Resume", pageName: "My Resume / Skills" },
@@ -41,9 +41,24 @@ export default function Navbar() {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
+          justifyContent: "space-around",
           padding: "1rem",
         }}
       >
+           <NavLink
+            to={"/"}
+            activeClassName="active-link"
+            sx={{
+              marginRight: "1rem",
+              textDecoration: isHomePage && isHovered ? "underline" : "none",
+            }}
+            onClick={() => handleNavLinkClick()}
+            onMouseEnter={() => handleMouseEnter()}
+            onMouseLeave={handleMouseLeave}
+          >
+          Claudia Solis
+          </NavLink>
+          <div>
         {navLinks.map((link) => (
           <NavLink
             key={link.to}
@@ -61,6 +76,7 @@ export default function Navbar() {
           {link.text}
           </NavLink>
         ))}
+        </div>
       </Box>
       {heroPage && <HeroPage title={heroPage} />}
     </div>
