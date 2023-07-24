@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import Navbar from "../layout/Navbar";
 
 const HoveredNavLinkContext = createContext();
 

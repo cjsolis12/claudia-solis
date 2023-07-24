@@ -15,16 +15,16 @@ export default function Home() {
     // Use a switch statement to set the header image based on the hoveredNavLink
     console.log("hovered Navlink", hoveredNavLink);
     switch (hoveredNavLink) {
-      case "about":
+      case "About":
         setHeaderImage(about);
         break;
-      case "work":
+      case "Work":
         setHeaderImage(work);
         break;
-      case "resume":
+      case "Resume":
         setHeaderImage(resume);
         break;
-      case "contact":
+      case "Contact":
         setHeaderImage(contact);
         break;
       default:
