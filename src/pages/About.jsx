@@ -19,7 +19,7 @@ export default function About() {
                 textAlign: "left",
                 fontWeight: "normal"
                   
-                }}>Hi, I'm Claudia Solis. A fullstack developer in the making</h1>
+                }}>Hi, I'm Claudia Solis! A fullstack developer in the making.</h1>
 
           <Typography variant="h6" style={{ textAlign: "left", fontSize:"20px" }}>
             With a passion for learning and creativity, I made the leap from
