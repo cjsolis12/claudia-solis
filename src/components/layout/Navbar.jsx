@@ -1,21 +1,20 @@
 import { createContext, useContext, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { Box } from "@mui/system";
-import { Padding } from "@mui/icons-material";
+import { AppBar, IconButton, Toolbar } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useHoveredNavLinkContext } from "../ui/HoveredNavLinkContext";
 import HeroPage from "./PageHero";
-import { Underline } from "../../animations/Underline";
 
 export default function Navbar() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const [heroPage, setHeroPage] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
-  const { setHoveredNavLink } = useHoveredNavLinkContext();
+  const { hoveredNavLink, setHoveredNavLink } = useHoveredNavLinkContext();
 
   // NavLinks
   const navLinks = [
-  
     { to: "/about", text: "About", pageName: "About Me" },
     { to: "/work", text: "Work", pageName: "My Work" },
     { to: "/resume", text: "Resume", pageName: "My Resume / Skills" },
@@ -36,48 +35,62 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
-      <Box
+      <Toolbar
         sx={{
           display: "flex",
-          flexDirection: "row",
+          justifyContent: "space-between",
           alignItems: "center",
-          justifyContent: "space-around",
-          padding: "1rem",
         }}
       >
-           <NavLink
-            to={"/"}
-            activeClassName="active-link"
-            sx={{
-              marginRight: "1rem",
-              textDecoration: isHomePage && isHovered ? "underline" : "none",
-            }}
-            onClick={() => handleNavLinkClick()}
-            onMouseEnter={() => handleMouseEnter()}
-            onMouseLeave={handleMouseLeave}
-          >
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{
+            display: { xs: "block", md: "none" },
+          }}
+          onClick={() => {}}
+        >
+          <MenuIcon />
+        </IconButton>
+        <NavLink
+          to={"/"}
+          className="nav-elements"
+          activeClassName="active-link"
+          sx={{
+            marginRight: "1rem",
+            textDecoration: isHomePage && isHovered ? "underline" : "none",
+          }}
+          onClick={() => handleNavLinkClick()}
+          onMouseEnter={() => handleMouseEnter()}
+          onMouseLeave={handleMouseLeave}
+        >
           Claudia Solis
-          </NavLink>
-          <div>
-        {navLinks.map((link) => (
-          <NavLink
-            key={link.to}
-            to={link.to}
-            exact={link.to === "/"}
-            activeClassName="active-link"
-            sx={{
-              marginRight: "1rem",
-              textDecoration: isHomePage && isHovered ? "underline" : "none",
-            }}
-            onClick={() => handleNavLinkClick(link.pageName)}
-            onMouseEnter={() => handleMouseEnter(link.text)}
-            onMouseLeave={handleMouseLeave}
-          >
-          {link.text}
-          </NavLink>
-        ))}
+        </NavLink>
+        <div className="nav-container">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              exact={link.to === "/"}
+              activeClassName="active-link"
+              sx={{
+                marginRight: "1rem",
+                textDecoration:
+                  isHomePage && hoveredNavLink === link.text
+                    ? "underline"
+                    : "none",
+                animation: `0.3s ease-in-out`,
+              }}
+              onClick={() => handleNavLinkClick(link.pageName)}
+              onMouseEnter={() => handleMouseEnter(link.text)}
+              onMouseLeave={handleMouseLeave}
+            >
+              {link.text}
+            </NavLink>
+          ))}
         </div>
-      </Box>
+      </Toolbar>
       {heroPage && <HeroPage title={heroPage} />}
     </div>
   );

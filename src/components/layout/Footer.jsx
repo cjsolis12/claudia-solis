@@ -22,9 +22,10 @@ export default function Footer() {
           flexDirection: "row",
           justifyContent: "space-around",
           alignItems: "center",
-          Padding: "1rem",
+          Padding: "7rem",
+          fontSize: "25px"
         }}
-        spacing={7}
+        spacing={10}
       >
         <NavLink 
         to="/about" 
