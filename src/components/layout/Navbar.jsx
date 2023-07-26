@@ -70,6 +70,7 @@ export default function Navbar() {
         <div className="nav-container">
           {navLinks.map((link) => (
             <NavLink
+              className="nav-elements"
               key={link.to}
               to={link.to}
               exact={link.to === "/"}
