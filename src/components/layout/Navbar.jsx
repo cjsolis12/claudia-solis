@@ -60,6 +60,7 @@ export default function Navbar() {
           sx={{
             marginRight: "1rem",
             textDecoration: isHomePage && isHovered ? "underline" : "none",
+          
           }}
           onClick={() => handleNavLinkClick()}
           onMouseEnter={() => handleMouseEnter()}

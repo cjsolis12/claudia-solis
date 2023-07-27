@@ -19,14 +19,12 @@ function App() {
     <>
    
       <Container
-        
         maxWidth="xl"
         boxSizing="border-box"
         height="100vh"
         sx={{ border: 2, display:"flex", flexDirection: "column" }}
       >
         <Navbar />
-        <Container>
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="about" element={<About />} />
@@ -34,7 +32,6 @@ function App() {
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
-        </Container>
         <Footer/>
       </Container>
      

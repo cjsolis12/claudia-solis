@@ -3,6 +3,7 @@ import { Grid, Paper, Typography } from "@mui/material";
 import image1 from "../assets/me3.jpg";
 import image3 from "../assets/me1.jpg";
 import image2 from "../assets/me2.jpg";
+import aboutme from "../assets/aboutme.jpg"
 import { RevealRight } from "../animations/RevealRight";
 import { RevealLeft } from "../animations/RevealLeft";
 import ImageSlideshow from "../components/ui/ImageChange";
@@ -34,7 +35,7 @@ export default function About() {
           <Grid container spacing={4}>
             <Grid item xs={12}>
               <img
-                src={image3}
+                src={aboutme}
                 alt="personal photo"
                 style={{
                   width: "100%",
