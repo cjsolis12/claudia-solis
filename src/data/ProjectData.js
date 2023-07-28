@@ -3,6 +3,7 @@ import triviaMind from "../assets/projectImages/triviaMindScreenshot.png"
 import weatherApp from "../assets/projectImages/weatherAppScreenshot.png"
 import bookSearch from "../assets/projectImages/book-search.png"
 import codeBoard from "../assets/projectImages/homefeed.png"
+import shortStack from "../assets/projectImages/shortStack.png"
 
 const projectData = [
     {
@@ -44,6 +45,14 @@ const projectData = [
         technologies: ["MVC", "HandleBars", "Group Project", "Sequelize", ],
         githubLink: "https://github.com/Timmackie/code-board",
         websiteLink: "https://codeboard.herokuapp.com/login"
+    },
+    {
+        img:shortStack,
+        title:"Short Stack",
+        description: "As part of this video social app development, I focused on implementing the user's database functionality, which included handling user authentication, user data storage, and user related actions.",
+        technologies: ["React", "TailWind", "Group Project", "Firebase"],
+        githubLink: "",
+        websiteLink: ""
     }
 
 ]
