@@ -19,7 +19,8 @@ export default function Contact() {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh"
+        height: "50vh",
+        width: "auto"
 
       }}
     >

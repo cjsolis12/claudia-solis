@@ -25,6 +25,7 @@ body {
   align-items: center;
   overflow: hidden;
   justify-content: end;
+  margin: 20px;
 }
 
 .home-img:before{
@@ -56,9 +57,9 @@ body {
   position: absolute;
   top: 50%;
   left: 10%;
-  transform:  translate(20%, -50%);
+  transform:  translate(50%, -50%);
   color: #373737;
-  font-size: 30px;
+  font-size: 25px;
 }
 .overlay-text h1,
 .overlay-text p {
