@@ -12,13 +12,13 @@ export default function About() {
         <RevealLeft>
           <h1  style={{
                 fontSize: "50px",
-                color: "",
+                color: "#373737",
                 textAlign: "left",
                 fontWeight: "normal"
                   
                 }}>Hi, I'm Claudia Solis! A fullstack developer in the making.</h1>
 
-          <Typography variant="h6" style={{ textAlign: "left", fontSize:"20px", fontWeight: "100" }}>
+          <Typography variant="h6" style={{ textAlign: "left", fontSize:"18px", fontWeight: "100", color: '#373737' }}>
             With a passion for learning and creativity, I made the leap from
             esthetician to teacher, nurturing minds along the way.
           </Typography>
@@ -37,13 +37,13 @@ export default function About() {
                   width: "100%",
                   height: "auto",
                   objectFit: "contain",
-                  boxShadow: "6px 6px 7px -2px rgba(151, 155, 154, 1)",
+                  boxShadow: "8px 8px 7px -2px rgba(151, 155, 154, 1)",
                 }}
               />
             </Grid>
 
             <Grid item xs={12}>
-              <Typography variant="h6" style={{ textAlign: "left", fontSize:"18px", fontWeight: "lighter"}}>
+              <Typography variant="h6" style={{ textAlign: "left", fontSize:"18px", fontWeight: "lighter", color: '#373737'}}>
                 But it was in the tech industry where I found my true calling,
                 embracing innovation, challenges, and opportunities. I am
                 excited to keep pushing myself to new heights, expanding my
