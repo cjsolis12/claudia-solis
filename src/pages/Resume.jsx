@@ -1,7 +1,6 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-// import { SiJavascript, SiNodeDotJs} from "react-icons/si";
 
 export default function Resume() {
   return (
@@ -9,7 +8,7 @@ export default function Resume() {
       container
       spacing={2}
       alignItems="center"
-      sx={{ maxWidth: 600, margin: "auto", border: "1px solid #ccc" }}
+      sx={{ maxWidth: 600, margin: "auto", maxHeight: "100vh" }}
     >
       {/* Text Column */}
       <Grid
@@ -31,7 +30,7 @@ export default function Resume() {
       <Grid item xs={6} md={6} sx={{ textAlign: "center", padding: "16px" }}>
         <h3>Skills</h3>
         <div>
-          {/* <SiJavascript size={48} /> */}
+          {/* <PiCodeLight size={48} /> */}
           <p>Frontend</p>
         </div>
         <div>

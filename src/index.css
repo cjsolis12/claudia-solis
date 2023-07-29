@@ -18,6 +18,15 @@ body {
 
 /* Header and Navbar Section */
 
+.hero{
+  margin: 4rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color:#373737;
+  font-size: 30px;
+
+}
+
 .hero-container{
   position: relative;
   height: 80vh;

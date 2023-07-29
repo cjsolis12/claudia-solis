@@ -1,7 +1,6 @@
-import { createContext, useContext, useState } from "react";
+import {  useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { Box } from "@mui/system";
-import { AppBar, IconButton, Toolbar } from "@mui/material";
+import { IconButton, Toolbar } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useHoveredNavLinkContext } from "../ui/HoveredNavLinkContext";
 import HeroPage from "./PageHero";
@@ -83,6 +82,7 @@ export default function Navbar() {
                     ? "underline"
                     : "none",
                 animation: `0.3s ease-in-out`,
+                display: { xs: "none", md: "initial" },
               }}
               onClick={() => handleNavLinkClick(link.pageName)}
               onMouseEnter={() => handleMouseEnter(link.text)}
