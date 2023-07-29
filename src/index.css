@@ -18,6 +18,11 @@ body {
 
 /* Header and Navbar Section */
 
+.navbar{
+  color: '#373737';
+  font-weight: 300;
+}
+
 .hero{
   margin: 4rem 0;
   font-family: 'Poppins', sans-serif;

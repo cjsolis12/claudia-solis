@@ -39,6 +39,7 @@ export default function Navbar() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          color: '#373737'
         }}
       >
         <IconButton
@@ -59,6 +60,7 @@ export default function Navbar() {
           sx={{
             marginRight: "1rem",
             textDecoration: isHomePage && isHovered ? "underline" : "none",
+            color: '#373737'
           
           }}
           onClick={() => handleNavLinkClick()}
