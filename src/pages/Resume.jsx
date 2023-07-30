@@ -1,6 +1,9 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
+import DevicesOutlinedIcon from '@mui/icons-material/DevicesOutlined';
+import StorageRoundedIcon from '@mui/icons-material/StorageRounded';
+import PsychologyRoundedIcon from '@mui/icons-material/PsychologyRounded';
 
 export default function Resume() {
   return (
@@ -30,15 +33,15 @@ export default function Resume() {
       <Grid item xs={6} md={6} sx={{ textAlign: "center", padding: "16px" }}>
         <h3>Skills</h3>
         <div>
-          {/* <PiCodeLight size={48} /> */}
+          <DevicesOutlinedIcon size={48} />
           <p>Frontend</p>
         </div>
         <div>
-          {/* <SiNodeDotJs size={48} /> */}
+          <StorageRoundedIcon size={48} />
           <p>Backend</p>
         </div>
         <div>
-          {/* <SiDatabase size={48} /> */}
+          <PsychologyRoundedIcon size={48} />
           <p>Other</p>
         </div>
       </Grid>

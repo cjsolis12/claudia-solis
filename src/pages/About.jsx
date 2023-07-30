@@ -6,17 +6,16 @@ import { RevealLeft } from "../animations/RevealLeft";
 
 export default function About() {
   return (
-    <Grid container spacing={8} marginBottom={5} paddingTop={5}>
+    <Grid container spacing={8} marginBottom={5} paddingTop={5} >
       {/* first row */}
       <Grid item xs={12} sm={6} container alignItems="center" justifyContent="center">
         <RevealLeft>
-          <h1  style={{
-                fontSize: "50px",
+          <Typography variant="h2"  style={{
                 color: "#373737",
                 textAlign: "left",
                 fontWeight: "normal"
                   
-                }}>Hi, I'm Claudia Solis! A fullstack developer in the making.</h1>
+                }}>Hi, I'm Claudia Solis! A fullstack developer in the making.</Typography>
 
           <Typography variant="h6" style={{ textAlign: "left", fontSize:"18px", fontWeight: "100", color: '#373737' }}>
             With a passion for learning and creativity, I made the leap from
