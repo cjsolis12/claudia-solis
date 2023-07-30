@@ -6,7 +6,7 @@ import { RevealLeft } from "../animations/RevealLeft";
 
 export default function About() {
   return (
-    <Grid container spacing={8} marginBottom={5} paddingTop={5} >
+    <Grid container spacing={8} marginBottom={5} paddingTop={5}>
       {/* first row */}
       <Grid item xs={12} sm={6} container alignItems="center" justifyContent="center">
         <RevealLeft>

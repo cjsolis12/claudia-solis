@@ -1,6 +1,7 @@
 import {  useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { IconButton, Toolbar, Typography } from "@mui/material";
+import {useTheme } from '@mui/material/styles'
 import MenuIcon from "@mui/icons-material/Menu";
 import { useHoveredNavLinkContext } from "../ui/HoveredNavLinkContext";
 import HeroPage from "./PageHero";
@@ -11,6 +12,7 @@ export default function Navbar() {
   const [heroPage, setHeroPage] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
   const { hoveredNavLink, setHoveredNavLink } = useHoveredNavLinkContext();
+  const theme = useTheme()
 
   // NavLinks
   const navLinks = [
@@ -85,6 +87,7 @@ export default function Navbar() {
                     : "none",
                 animation: `0.3s ease-in-out`,
                 display: { xs: "none", md: "initial" },
+                color: theme.palette.primary.main
               }}
               onClick={() => handleNavLinkClick(link.pageName)}
               onMouseEnter={() => handleMouseEnter(link.text)}

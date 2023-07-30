@@ -2,6 +2,8 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Box, Container } from "@mui/system";
 
+
+
 //Components
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -22,7 +24,7 @@ function App() {
         maxWidth="xl"
         boxSizing="border-box"
         height="100vh"
-        sx={{ border: 2, display:"flex", flexDirection: "column" }}
+        sx={{  display:"flex", flexDirection: "column" }}
       >
         <Navbar />
         <Routes>

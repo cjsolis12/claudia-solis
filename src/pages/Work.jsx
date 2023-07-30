@@ -19,7 +19,8 @@ export default function Work() {
 
   return (
     <>
-      <Grid container spacing={6} justifyContent="center">
+    <div style={{ display: "flex", justifyContent: "center", }}>
+      <Grid container sm={12} md={12} spacing={6} justifyContent="center">
         {projectData.map((item, index) => (
           <Grid
             item
@@ -153,6 +154,7 @@ export default function Work() {
           </Grid>
         ))}
       </Grid>
+      </div>
     </>
   );
 }
