@@ -21,148 +21,146 @@ export default function Work() {
   return (
     <>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <RevealTop>
-          <Grid container sm={12} md={12} spacing={6} justifyContent="center">
-            {projectData.map((item, index) => (
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                key={item.id}
-                style={{ height: "300px", width: "200px" }}
+        <Grid container sm={12} md={12} spacing={6} justifyContent="center">
+          {projectData.map((item, index) => (
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              key={item.id}
+              style={{ height: "300px", width: "200px" }}
+            >
+              <motion.div
+                style={{
+                  position: "relative",
+                  overflow: "hidden",
+                  width: "100%",
+                  height: "100%",
+                  boxShadow: "8px 8px 8px -2px rgba(151, 155, 154, 1)",
+                }}
+                onHoverStart={() => handleHoverStart(index)}
+                onHoverEnd={handleHoverEnd}
               >
-                <motion.div
+                <motion.img
+                  src={item.img}
+                  alt={item.alt}
                   style={{
-                    position: "relative",
-                    overflow: "hidden",
+                    maxWidth: "100%",
+                    maxHeightheight: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    filter: hoveredIndex === index ? "blur(5px)" : "none",
+                  }}
+                />
+                {/* overlay on image hover */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={
+                    hoveredIndex === index ? { opacity: 0.6 } : { opacity: 0 }
+                  }
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
                     width: "100%",
                     height: "100%",
-                    boxShadow: "8px 8px 8px -2px rgba(151, 155, 154, 1)",
+                    backgroundColor: "black",
                   }}
-                  onHoverStart={() => handleHoverStart(index)}
-                  onHoverEnd={handleHoverEnd}
+                />
+                <motion.div
+                  initial={{ y: -60, opacity: 0 }}
+                  animate={
+                    hoveredIndex === index
+                      ? { y: 0, opacity: 1 }
+                      : { y: -20, opacity: 0 }
+                  }
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  style={{
+                    position: "absolute",
+                    zIndex: "10",
+                    top: "30px",
+                    background: "none",
+                    padding: "7px",
+                  }}
                 >
-                  <motion.img
-                    src={item.img}
-                    alt={item.alt}
+                  <Typography
+                    variant="subtitle1"
                     style={{
-                      maxWidth: "100%",
-                      maxHeightheight: "100%",
-                      objectFit: "cover",
-                      objectPosition: "center",
-                      filter: hoveredIndex === index ? "blur(5px)" : "none",
+                      color: "#fff",
+                      fontSize: "20px",
+                      textAlign: "center",
                     }}
-                  />
-                  {/* overlay on image hover */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={
-                      hoveredIndex === index ? { opacity: 0.6 } : { opacity: 0 }
-                    }
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      backgroundColor: "black",
-                    }}
-                  />
-                  <motion.div
-                    initial={{ y: -60, opacity: 0 }}
-                    animate={
-                      hoveredIndex === index
-                        ? { y: 0, opacity: 1 }
-                        : { y: -20, opacity: 0 }
-                    }
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    style={{
-                      position: "absolute",
-                      zIndex: "10",
-                      top: "30px",
-                      background: "none",
-                      padding: "7px",
+                  >
+                    {item.description}
+                  </Typography>
+                </motion.div>
+
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={
+                    hoveredIndex === index
+                      ? { y: 0, opacity: 1 }
+                      : { y: 20, opacity: 0 }
+                  }
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  style={{
+                    position: "absolute",
+                    zIndex: "10",
+                    bottom: 0,
+                    left: 0,
+                    width: "100%",
+                    background: "rgba(0, 0, 0, 0.7)",
+                    padding: "4px",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      marginRight: "30px",
+                      marginLeft: "30px",
                     }}
                   >
                     <Typography
                       variant="subtitle1"
-                      style={{
-                        color: "#fff",
-                        fontSize: "20px",
-                        textAlign: "center",
-                      }}
+                      style={{ color: "#fff", fontSize: "20px" }}
                     >
-                      {item.description}
+                      {item.title}
                     </Typography>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={
-                      hoveredIndex === index
-                        ? { y: 0, opacity: 1 }
-                        : { y: 20, opacity: 0 }
-                    }
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    style={{
-                      position: "absolute",
-                      zIndex: "10",
-                      bottom: 0,
-                      left: 0,
-                      width: "100%",
-                      background: "rgba(0, 0, 0, 0.7)",
-                      padding: "4px",
-                    }}
-                  >
                     <Box
                       sx={{
                         display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
+                        flexDirection: "row-reverse",
                         alignItems: "center",
-                        marginRight: "30px",
-                        marginLeft: "30px",
+                        zIndex: "10",
                       }}
                     >
-                      <Typography
-                        variant="subtitle1"
-                        style={{ color: "#fff", fontSize: "20px" }}
+                      <IconButton
+                        href={item.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff", zIndex: "1" }}
                       >
-                        {item.title}
-                      </Typography>
-                      <Box
-                        sx={{
-                          display: "flex",
-                          flexDirection: "row-reverse",
-                          alignItems: "center",
-                          zIndex: "10",
-                        }}
+                        <GitHubIcon />
+                      </IconButton>
+                      <IconButton
+                        href={item.websiteLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#fff" }}
                       >
-                        <IconButton
-                          href={item.githubLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{ color: "#fff", zIndex: "1" }}
-                        >
-                          <GitHubIcon />
-                        </IconButton>
-                        <IconButton
-                          href={item.websiteLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{ color: "#fff" }}
-                        >
-                          <InsertLinkIcon />
-                        </IconButton>
-                      </Box>
+                        <InsertLinkIcon />
+                      </IconButton>
                     </Box>
-                  </motion.div>
+                  </Box>
                 </motion.div>
-              </Grid>
-            ))}
-          </Grid>
-        </RevealTop>
+              </motion.div>
+            </Grid>
+          ))}
+        </Grid>
       </div>
     </>
   );

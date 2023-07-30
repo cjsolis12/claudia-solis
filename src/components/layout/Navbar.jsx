@@ -1,7 +1,7 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { IconButton, Toolbar, Typography } from "@mui/material";
-import {useTheme } from '@mui/material/styles'
+import { IconButton, Toolbar, Typography, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useHoveredNavLinkContext } from "../ui/HoveredNavLinkContext";
 import HeroPage from "./PageHero";
@@ -12,7 +12,9 @@ export default function Navbar() {
   const [heroPage, setHeroPage] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
   const { hoveredNavLink, setHoveredNavLink } = useHoveredNavLinkContext();
-  const theme = useTheme()
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const [showNavLinks, setShowNavLinks] = useState(false)
 
   // NavLinks
   const navLinks = [
@@ -24,6 +26,9 @@ export default function Navbar() {
 
   const handleNavLinkClick = (pageName) => {
     setHeroPage(pageName);
+    if(isSmallScreen){
+      setShowNavLinks(false)
+    }
   };
 
   const handleMouseEnter = (navLinkName) => {
@@ -34,6 +39,11 @@ export default function Navbar() {
     setHoveredNavLink(null);
   };
 
+  //Toggle the state to show/hide the navLinks on small Screens
+  const handleMenuClick = () => {
+    setShowNavLinks((prevShowNavLinks) => ! prevShowNavLinks)
+  }
+
   return (
     <div className="navbar">
       <Toolbar
@@ -41,20 +51,24 @@ export default function Navbar() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          color: '#373737'
+          color: "#373737",
         }}
       >
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{
-            display: { xs: "block", md: "none" },
-          }}
-          onClick={() => {}}
-        >
-          <MenuIcon />
-        </IconButton>
+        {/* Hamburger menu for small screens */}
+        {isSmallScreen && (
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{
+              display: { xs: "block", md: "none" },
+            }}
+            onClick={handleMenuClick}
+          >
+            <MenuIcon />
+          </IconButton>
+        )}
+
         <NavLink
           to={"/"}
           className="nav-elements"
@@ -62,8 +76,7 @@ export default function Navbar() {
           sx={{
             marginRight: "1rem",
             textDecoration: isHomePage && isHovered ? "underline" : "none",
-            color: '#373737'
-          
+            color: "#373737",
           }}
           onClick={() => handleNavLinkClick()}
           onMouseEnter={() => handleMouseEnter()}
@@ -71,31 +84,39 @@ export default function Navbar() {
         >
           Claudia Solis
         </NavLink>
+
+        {/* Page NavLinks */}
         <div className="nav-container">
-          {navLinks.map((link) => (
-            <NavLink
-              className="nav-elements"
-              key={link.to}
-              to={link.to}
-              exact={link.to === "/"}
-              activeClassName="active-link"
-              sx={{
-                marginRight: "1rem",
-                textDecoration:
-                  isHomePage && hoveredNavLink === link.text
-                    ? "underline"
-                    : "none",
-                animation: `0.3s ease-in-out`,
-                display: { xs: "none", md: "initial" },
-                color: theme.palette.primary.main
-              }}
-              onClick={() => handleNavLinkClick(link.pageName)}
-              onMouseEnter={() => handleMouseEnter(link.text)}
-              onMouseLeave={handleMouseLeave}
-            >
-              {link.text}
-            </NavLink>
-          ))}
+
+          {/* Show/hide navlinks based on state */}
+          {(isSmallScreen && showNavLinks) || !isSmallScreen ? (
+             <div>
+             {navLinks.map((link) => (
+               <NavLink
+                 className="nav-elements"
+                 key={link.to}
+                 to={link.to}
+                 exact={link.to === "/"}
+                 activeClassName="active-link"
+                 sx={{
+                   marginRight: "1rem",
+                   textDecoration:
+                     isHomePage && hoveredNavLink === link.text
+                       ? "underline"
+                       : "none",
+                   animation: `0.3s ease-in-out`,
+                   display: { xs: "none", md: "initial" },
+                   color: theme.palette.primary.main,
+                 }}
+                 onClick={() => handleNavLinkClick(link.pageName)}
+                 onMouseEnter={() => handleMouseEnter(link.text)}
+                 onMouseLeave={handleMouseLeave}
+               >
+                 {link.text}
+               </NavLink>
+             ))}
+           </div>
+         ) : null}
         </div>
       </Toolbar>
       {heroPage && <HeroPage title={heroPage} />}
