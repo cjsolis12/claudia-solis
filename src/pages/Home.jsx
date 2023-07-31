@@ -51,6 +51,7 @@ export default function Home() {
             <Button variant="contained" sx={{backgroundColor: "#C7A6C5", margin:"5px"}}>Github</Button>
             </Box>
           </div>
+          
           <img src={headerImage} alt="Header Image" className="header-images" />
           <div className="svg-decoration"></div>
         </div>

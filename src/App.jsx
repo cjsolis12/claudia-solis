@@ -1,6 +1,5 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Box, Container } from "@mui/system";
 
 //Components
 import Navbar from "./components/layout/Navbar";
@@ -16,7 +15,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <>
-      <Container height="100vh">
+      <div height="100vh">
         <Navbar />
         <Routes>
           <Route path="" element={<Home />} />
@@ -26,7 +25,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Routes>
         <Footer />
-      </Container>
+      </div>
     </>
   );
 }
