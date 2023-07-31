@@ -40,19 +40,35 @@ export default function Contact() {
       elevation={3}
       sx={{
         display: "flex",
-        flexDirection: isMobile ? "column" : "row",
+        flexDirection: { xs: "column", md: "row" },
         justifyContent: "center",
         alignItems: "center",
-        height: "50vh",
-        width: isMobile ? "80vw" : "auto",
+        height: { xs: "90vh", md: "60vh" },
+        width: { xs: "80vw", md: "auto" },
         margin: "0 auto",
+        padding: "50px 40px",
+        boxSizing: "border-box",
       }}
     >
-      <img
-        src={contactForm}
-        alt="contact"
-        style={{ width: "300px", height: "200px", objectFit: "contain" }}
-      />
+      {/* Container for the image */}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginRight: { xs: 0, md: "20px" },
+          marginBottom: { xs: "20px", md: 0 },
+          width: "100%",
+        }}
+      >
+        <img
+          src={contactForm}
+          alt="contact"
+          style={{ width: "300px", height: "200px", objectFit: "contain" }}
+        />
+      </Box>
+
+      {/* Container for the form*/}
       <Box
         component="form"
         ref={form}
@@ -63,8 +79,9 @@ export default function Contact() {
           justifyContent: "center",
           alignItems: "center",
           margin: "15px",
-          "& .MuiTextField-root": { m: 2, width: "25ch" },
+          "& .MuiTextField-root": { m: 2, width: "100%" },
           "& .MuiButton-root": { mt: 4 },
+          width: "100%",
         }}
         noValidate
         autoComplete="off"
