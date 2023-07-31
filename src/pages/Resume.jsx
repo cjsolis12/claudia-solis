@@ -36,7 +36,7 @@ export default function Resume() {
       <Grid item xs={12} md={4} sx={{ padding: "16px", alignItems: "center" }}>
         <Grow in={true} easing="ease-in-out" timeout={800}>
           <Paper sx={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "16px" }}>
-            <Avatar>
+            <Avatar sx={{ backgroundColor: Colors.lilac }}>
               <DevicesOutlinedIcon />
             </Avatar>
             <h4>Front End Skills</h4>
@@ -48,7 +48,7 @@ export default function Resume() {
       <Grid item xs={12} md={4} sx={{ textAlign: "center", padding: "16px" }}>
         <Grow in={true} easing="ease-in-out" timeout={900}>
           <Paper sx={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "16px"}}>
-            <Avatar>
+            <Avatar sx={{ backgroundColor: Colors.lilac }}>
               <StorageRoundedIcon />
             </Avatar>
             <h4>Backend Skills </h4>
@@ -60,7 +60,7 @@ export default function Resume() {
       <Grid item xs={12} md={4} sx={{ textAlign: "center", padding: "16px" }}>
         <Grow in={true} easing="ease-in-out" timeout={1000}>
           <Paper sx={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "16px"}}>
-            <Avatar>
+            <Avatar sx={{ backgroundColor: Colors.lilac }}>
               <PsychologyRoundedIcon />
             </Avatar>
             <h4>Cross-Industry Experience </h4>
