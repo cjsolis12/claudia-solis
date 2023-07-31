@@ -8,19 +8,24 @@ import {
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import contactForm from "../assets/contactForm.jpg";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Contact() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
    
     <Paper
       elevation={3}
       sx={{
         display: "flex",
-        flexDirection: "row",
+        flexDirection: isMobile ? "column" : "row",
         justifyContent: "center",
         alignItems: "center",
         height: "50vh",
-        width: "auto"
+        width: isMobile ? "80vw" : "auto",
+       margin: "0 auto"
 
       }}
     >
