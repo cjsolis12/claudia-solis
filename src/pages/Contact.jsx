@@ -24,7 +24,7 @@ export default function Contact() {
       <img
         src={contactForm}
         alt="contact"
-        style={{ width: "300px", height: "200px", objectFit: "cover" }}
+        style={{ width: "300px", height: "200px", objectFit: "contain" }}
       />
       <Box
         component="form"
@@ -34,7 +34,8 @@ export default function Contact() {
           justifyContent: "center",
           alignItems: "center",
           margin: "15px",
-          "& .MuiTextField-root": { m: 1, width: "25ch" },
+          "& .MuiTextField-root": { m: 2, width: "25ch" },
+          "& .MuiButton-root": { mt: 4 },
         }}
         noValidate
         autoComplete="off"
