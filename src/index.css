@@ -62,11 +62,12 @@ body, html {
 }
 
 .header-images {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
+  position: block;
+  width: 400px;
+  max-width: 100%;
   height: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .svg-decoration {
@@ -119,7 +120,7 @@ body, html {
   bottom: -5px;
   left: 0;
   height: 1px;
-  background-color: #169086;
+  background-color: #D0CE27;
   width: 0%;
 
 }
