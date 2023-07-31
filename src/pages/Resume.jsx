@@ -30,17 +30,17 @@ export default function Resume() {
       </Grid> */}
 
       {/* Front End Skills */}
-      <Grid item xs={6} md={4} sx={{ padding: "16px" }}>
+      <Grid item xs={12} md={4} sx={{ padding: "16px" }}>
         <Paper>  <div>
           {" "}
-          <DevicesOutlinedIcon size={48} />
+          <DevicesOutlinedIcon  />
         </div>
         <h4>Front End Skills</h4></Paper>
       
       </Grid>
 
       {/* Back End Skills */}
-      <Grid item xs={6} md={4} sx={{ textAlign: "center", padding: "16px" }}>
+      <Grid item xs={12} md={4} sx={{ textAlign: "center", padding: "16px" }}>
         <Paper>
         <div>
           {" "}
@@ -52,7 +52,7 @@ export default function Resume() {
       </Grid>
 
       {/* Other */}
-      <Grid item xs={6} md={4} sx={{ textAlign: "center", padding: "16px" }}>
+      <Grid item xs={12} md={4} sx={{ textAlign: "center", padding: "16px" }}>
         <Paper>
           <div>
             {" "}

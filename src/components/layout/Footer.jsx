@@ -1,54 +1,40 @@
 import { NavLink } from "react-router-dom";
 import { Box } from "@mui/system";
+import Container from "@mui/material/Container";
+import Link from "@mui/material/Link";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-
 
 export default function Footer() {
   return (
     <>
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: "auto",
- 
-      }}
-    >
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-around",
-          alignItems: "center",
-          Padding: "7rem",
-          fontSize: "25px"
+          py: 3,
+          px: 2,
+          mt: "auto",
         }}
-        spacing={10}
       >
-        <NavLink 
-        to="/about" 
-        activeClassName="active-link"
-        >
-          <HiOutlineMail/>
-        </NavLink>
-        <NavLink 
-        to="/work" 
-        activeClassName="active-link"
-     
-        >
-        <FaGithub/>
-        </NavLink>
-        <NavLink 
-        to="/contact" 
-        activeClassName="active-link"
-        >
-          <FaLinkedinIn/>
-        </NavLink>
+        <Container maxWidth="sm">
+          <Link activeClassName="active-link" href="" target="_blank" rel="noopener">
+            <HiOutlineMail />
+          </Link>
+          <Link
+            activeClassName="active-link"
+            href="https://github.com/cjsolis12"
+            target="_blank" rel="noopener"
+          >
+            <FaGithub />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/claudia-solis-48599422a/"
+            activeClassName="active-link"
+            target="_blank" rel="noopener"
+          >
+            <FaLinkedinIn />
+          </Link>
+        </Container>
       </Box>
-    </Box>
     </>
   );
 }
