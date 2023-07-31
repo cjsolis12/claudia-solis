@@ -10,11 +10,11 @@ export default function Resume() {
     <Grid
       container
       spacing={2}
-      alignItems="center"
+    
       sx={{ maxWidth: 600, margin: "auto", maxHeight: "100vh" }}
     >
       {/* Text Column */}
-      <Grid
+      {/* <Grid
         item
         xs={6}
         md={6}
@@ -28,22 +28,27 @@ export default function Resume() {
         <div>
           <Button variant="contained">Resume</Button>
         </div>
+      </Grid> */}
+
+        {/* Front End Skills */}
+      <Grid item xs={6} md={4} sx={{ padding: "16px" }}>
+        <div> <DevicesOutlinedIcon size={48} /></div>
+        <h4>Front End Skills</h4>
       </Grid>
 
-      <Grid item xs={6} md={6} sx={{ textAlign: "center", padding: "16px" }}>
-        <h3>Skills</h3>
-        <div>
-          <DevicesOutlinedIcon size={48} />
-          <p>Frontend</p>
-        </div>
-        <div>
-          <StorageRoundedIcon size={48} />
-          <p>Backend</p>
-        </div>
-        <div>
-          <PsychologyRoundedIcon size={48} />
-          <p>Other</p>
-        </div>
+         {/* Back End Skills */}
+      <Grid item xs={6} md={4} sx={{ textAlign: "center", padding: "16px" }}>
+       <div> <StorageRoundedIcon size={48} /></div>
+       <h4>Backend Skills </h4>
+     
+ 
+      </Grid>
+
+      {/* Other */}
+      <Grid item xs={6} md={4} sx={{ textAlign: "center", padding: "16px" }}>
+       <div> <PsychologyRoundedIcon size={48} /></div>
+       <h4>Cross-Industry Experience </h4>
+    
       </Grid>
     </Grid>
   );
