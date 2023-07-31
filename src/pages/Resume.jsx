@@ -41,7 +41,7 @@ export default function Resume() {
                 id="basic-list-demo"
                 level="body3"
                 textTransform="uppercase"
-                fontWeight="lg"
+                fontWeight="600"
               >
                 Front End Skills
               </Typography>
@@ -51,14 +51,14 @@ export default function Resume() {
                   "& .MuiListItem-dense": { paddingTop: 0, paddingBottom: 0 },
                 }}
               >
-                <ListItem>HTML</ListItem>
-                <ListItem>CSS</ListItem>
-                <ListItem>Javascript</ListItem>
-                <ListItem>React</ListItem>
-                <ListItem>JQuery</ListItem>
-                <ListItem>TailWind</ListItem>
-                <ListItem>Bootstrap</ListItem>
-                <ListItem>Material UI</ListItem>
+                <Typography>HTML</Typography>
+                <Typography>CSS</Typography>
+                <Typography>Javascript</Typography>
+                <Typography>React</Typography>
+                <Typography>JQuery</Typography>
+                <Typography>TailWind</Typography>
+                <Typography>Bootstrap</Typography>
+                <Typography>Material UI</Typography>
               </List>
             </Paper>
           </Grow>
@@ -85,7 +85,7 @@ export default function Resume() {
                 id="basic-list-demo"
                 level="body3"
                 textTransform="uppercase"
-                fontWeight="lg"
+                fontWeight="600"
               >
                 Back End Skills
               </Typography>
@@ -95,11 +95,11 @@ export default function Resume() {
                   "& .MuiListItem-dense": { paddingTop: 0, paddingBottom: 0 },
                 }}
               >
-                <ListItem>Node JS</ListItem>
-                <ListItem>Express</ListItem>
-                <ListItem>GraphQL</ListItem>
-                <ListItem>Mongo DB</ListItem>
-                <ListItem>MySQL</ListItem>
+                <Typography>Node JS</Typography>
+                <Typography>Express</Typography>
+                <Typography>GraphQL</Typography>
+                <Typography>Mongo DB</Typography>
+                <Typography>MySQL</Typography>
               </List>
             </Paper>
           </Grow>
@@ -126,21 +126,22 @@ export default function Resume() {
                 id="basic-list-demo"
                 level="body3"
                 textTransform="uppercase"
-                fontWeight="lg"
+                fontWeight="600"
               >
                 Cross-Industry Experience
               </Typography>
               <List
+              dense
                 sx={{
                   marginTop: "10px",
                   "& .MuiListItem-dense": { paddingTop: 0, paddingBottom: 0 },
                 }}
               >
-                <ListItem>Node JS</ListItem>
-                <ListItem>Express</ListItem>
-                <ListItem>GraphQL</ListItem>
-                <ListItem>Mongo DB</ListItem>
-                <ListItem>MySQL</ListItem>
+                <Typography >Node JS</Typography>
+                <Typography>Express</Typography>
+                <Typography>GraphQL</Typography>
+                <Typography>Mongo DB</Typography>
+                <Typography>MySQL</Typography>
               </List>
             </Paper>
           </Grow>
