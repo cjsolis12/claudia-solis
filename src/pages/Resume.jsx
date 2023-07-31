@@ -28,6 +28,7 @@ export default function Resume() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                paddingTop: "3rem",
                 padding: "8px",
                 minHeight: "300px",
                 width: "100%",
@@ -72,6 +73,7 @@ export default function Resume() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
+                paddingTop: "3rem",
                 alignItems: "center",
                 padding: "8px",
                 minHeight: "300px",
@@ -113,10 +115,12 @@ export default function Resume() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
+       
                 alignItems: "center",
                 padding: "8px",
                 minHeight: "300px",
                 width: "100%",
+             
               }}
             >
               <Avatar sx={{ backgroundColor: Colors.oliveGreen }}>
