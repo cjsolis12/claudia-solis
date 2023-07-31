@@ -70,7 +70,9 @@ export default function Contact() {
           label="Message"
           style={{ margin: "5px" }}
         ></TextField>
-        <Button variant="contained" endIcon={<SendIcon />}>
+        <Button variant="contained" endIcon={<SendIcon />}  sx={{
+          backgroundColor: "#D0CE27",
+        }}>
           Send
         </Button>
       </Box>
