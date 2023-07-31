@@ -1,11 +1,5 @@
 import * as React from "react";
-import {
-  Paper,
-  TextField,
-  Box,
-  Button,
-
-} from "@mui/material";
+import { Paper, TextField, Box, Button } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import contactForm from "../assets/contactForm.jpg";
 import { useTheme } from "@mui/material/styles";
@@ -15,7 +9,6 @@ export default function Contact() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-   
     <Paper
       elevation={3}
       sx={{
@@ -25,8 +18,7 @@ export default function Contact() {
         alignItems: "center",
         height: "50vh",
         width: isMobile ? "80vw" : "auto",
-       margin: "0 auto"
-
+        margin: "0 auto",
       }}
     >
       <img
@@ -70,9 +62,13 @@ export default function Contact() {
           label="Message"
           style={{ margin: "5px" }}
         ></TextField>
-        <Button variant="contained" endIcon={<SendIcon />}  sx={{
-          backgroundColor: "#D0CE27",
-        }}>
+        <Button
+          variant="contained"
+          endIcon={<SendIcon />}
+          sx={{
+            backgroundColor: "#D0CE27",
+          }}
+        >
           Send
         </Button>
       </Box>

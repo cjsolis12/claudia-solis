@@ -22,13 +22,14 @@ export default function Footer() {
       }}
       >
         <Container maxWidth="sm">
-          <Link activeClassName="active-link" href="" target="_blank" rel="noopener">
+          <Link activeClassName="active-link" href="" target="_blank" rel="noopener"  sx={{ fontSize: "24px", margin: "10px" }}>
             <HiOutlineMail />
           </Link>
           <Link
             activeClassName="active-link"
             href="https://github.com/cjsolis12"
             target="_blank" rel="noopener"
+            sx={{ fontSize: "24px", margin: "10px"  }}
           >
             <FaGithub />
           </Link>
@@ -36,6 +37,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/claudia-solis-48599422a/"
             activeClassName="active-link"
             target="_blank" rel="noopener"
+            sx={{ fontSize: "24px", margin: "10px"}}
           >
             <FaLinkedinIn />
           </Link>
