@@ -5,6 +5,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
+import Divider from '@mui/material/Divider';
 import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
 import StorageRoundedIcon from "@mui/icons-material/StorageRounded";
 import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded";
@@ -12,10 +13,11 @@ import Grow from "@mui/material/Grow";
 
 export default function Resume() {
   return (
+    <>
     <Grid
       container
-      spacing={2}
-      sx={{ maxWidth: 600, margin: "auto", maxHeight: "100vh" }}
+      spacing={9}
+      sx={{ maxHeight: "100vh" }}
     >
       {/* Text Column */}
       {/* <Grid
@@ -43,7 +45,9 @@ export default function Resume() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              padding: "16px",
+              padding: "8px",
+              minHeight: "300px",
+              width: "100%"
             }}
           >
             <Avatar sx={{ backgroundColor: Colors.lilac }}>
@@ -58,7 +62,7 @@ export default function Resume() {
             >
               Front End Skills
             </Typography>
-            <List>
+            <List sx={{ marginTop: "10px", "& .MuiListItem-dense": { paddingTop: 0, paddingBottom: 0 } }}>
               <ListItem>HTML</ListItem>
               <ListItem>CSS</ListItem>
               <ListItem>Javascript</ListItem>
@@ -81,7 +85,9 @@ export default function Resume() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              padding: "16px",
+              padding: "8px",
+              minHeight: "300px",
+              width: "100%"
             }}
           >
             <Avatar sx={{ backgroundColor: Colors.lilac }}>
@@ -95,7 +101,7 @@ export default function Resume() {
             >
               Back End Skills
             </Typography>
-            <List>
+            <List sx={{ marginTop: "10px", "& .MuiListItem-dense": { paddingTop: 0, paddingBottom: 0 } }}>
               <ListItem>Node JS</ListItem>
               <ListItem>Express</ListItem>
               <ListItem>GraphQL</ListItem>
@@ -116,7 +122,9 @@ export default function Resume() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              padding: "16px",
+              padding: "8px",
+              minHeight: "300px",
+              width: "100%"
             }}
           >
             <Avatar sx={{ backgroundColor: Colors.lilac }}>
@@ -130,9 +138,19 @@ export default function Resume() {
             >
               Cross-Industry Experience
             </Typography>
+            <List sx={{ marginTop: "10px", "& .MuiListItem-dense": { paddingTop: 0, paddingBottom: 0 } }}>
+              <ListItem>Node JS</ListItem>
+              <ListItem>Express</ListItem>
+              <ListItem>GraphQL</ListItem>
+              <ListItem>Mongo DB</ListItem>
+              <ListItem>MySQL</ListItem>
+          
+            </List>
           </Paper>
         </Grow>
       </Grid>
     </Grid>
+          <Divider>Resume</Divider>
+          </>
   );
 }
