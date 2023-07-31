@@ -88,7 +88,8 @@ export default function Contact() {
         <TextField
           name="message"
           type="text"
-          rows={20}
+          multiline
+          rows={5}
           label="Message"
           style={{ margin: "5px" }}
         ></TextField>
