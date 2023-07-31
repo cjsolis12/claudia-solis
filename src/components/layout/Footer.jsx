@@ -13,8 +13,7 @@ export default function Footer() {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-       
-        marginTop: "5rem",
+        marginTop: "auto",
  
       }}
     >

@@ -15,7 +15,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <>
-      <div height="100vh">
+      <div className="main-container">
         <Navbar />
         <Routes>
           <Route path="" element={<Home />} />
