@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
 import StorageRoundedIcon from "@mui/icons-material/StorageRounded";
 import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded";
+import Grow from "@mui/material/Grow";
 
 export default function Resume() {
   return (
@@ -31,35 +32,42 @@ export default function Resume() {
 
       {/* Front End Skills */}
       <Grid item xs={12} md={4} sx={{ padding: "16px" }}>
-        <Paper>  <div>
-          {" "}
-          <DevicesOutlinedIcon  />
-        </div>
-        <h4>Front End Skills</h4></Paper>
-      
+        <Grow in={true} easing="ease-in-out" timeout={800}>
+          <Paper>
+            {" "}
+            <div>
+              {" "}
+              <DevicesOutlinedIcon />
+            </div>
+            <h4>Front End Skills</h4>
+          </Paper>
+        </Grow>
       </Grid>
 
       {/* Back End Skills */}
       <Grid item xs={12} md={4} sx={{ textAlign: "center", padding: "16px" }}>
-        <Paper>
-        <div>
-          {" "}
-          <StorageRoundedIcon size={48} />
-        </div>
-        <h4>Backend Skills </h4>
-        </Paper>
-   
+        <Grow in={true} easing="ease-in-out" timeout={900}>
+          <Paper>
+            <div>
+              {" "}
+              <StorageRoundedIcon size={48} />
+            </div>
+            <h4>Backend Skills </h4>
+          </Paper>
+        </Grow>
       </Grid>
 
       {/* Other */}
       <Grid item xs={12} md={4} sx={{ textAlign: "center", padding: "16px" }}>
-        <Paper>
-          <div>
-            {" "}
-            <PsychologyRoundedIcon size={48} />
-          </div>
-          <h4>Cross-Industry Experience </h4>
-        </Paper>
+        <Grow in={true} easing="ease-in-out" timeout={1000}>
+          <Paper>
+            <div>
+              {" "}
+              <PsychologyRoundedIcon size={48} />
+            </div>
+            <h4>Cross-Industry Experience </h4>
+          </Paper>
+        </Grow>
       </Grid>
     </Grid>
   );
