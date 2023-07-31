@@ -46,16 +46,17 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
-      <Toolbar
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          color: "#373737",
-        }}
-      >
-        {/* Hamburger menu for small screens */}
-        {isSmallScreen && (
+    <Toolbar
+      sx={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        color: "#373737",
+      }}
+    >
+      {/* Hamburger menu for small screens */}
+      {isSmallScreen && (
+        <div style={{ display: "flex", alignItems: "center" }}>
           <IconButton
             edge="start"
             color="inherit"
@@ -67,59 +68,91 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-        )}
-
-        <NavLink
-          to={"/"}
-          className="nav-elements"
-          activeClassName="active-link"
-          sx={{
-            marginRight: "1rem",
-            textDecoration: isHomePage && isHovered ? "underline" : "none",
-            color: "#373737",
-          }}
-          onClick={() => handleNavLinkClick()}
-          onMouseEnter={() => handleMouseEnter()}
-          onMouseLeave={handleMouseLeave}
-        >
-          Claudia Solis
-        </NavLink>
-
-        {/* Page NavLinks */}
-        <div className="nav-container">
-
-          {/* Show/hide navlinks based on state */}
-          {(isSmallScreen && showNavLinks) || !isSmallScreen ? (
-             <div>
-             {navLinks.map((link) => (
-               <NavLink
-                 className="nav-elements"
-                 key={link.to}
-                 to={link.to}
-                 exact={link.to === "/"}
-                 activeClassName="active-link"
-                 sx={{
-                   marginRight: "1rem",
-                   textDecoration:
-                     isHomePage && hoveredNavLink === link.text
-                       ? "underline"
-                       : "none",
-                   animation: `0.3s ease-in-out`,
-                   display: { xs: "none", md: "initial" },
-                   color: theme.palette.primary.main,
-                 }}
-                 onClick={() => handleNavLinkClick(link.pageName)}
-                 onMouseEnter={() => handleMouseEnter(link.text)}
-                 onMouseLeave={handleMouseLeave}
-               >
-                 {link.text}
-               </NavLink>
-             ))}
-           </div>
-         ) : null}
+          {/* Render navLinks as a column under the icon when showNavLinks is true */}
+          {showNavLinks && (
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              {navLinks.map((link) => (
+                <NavLink
+                  key={link.to}
+                  to={link.to}
+                  exact={link.to === "/"}
+                  activeClassName="active-link"
+                  sx={{
+                    textDecoration:
+                      isHomePage && hoveredNavLink === link.text
+                        ? "underline"
+                        : "none",
+                    animation: `0.3s ease-in-out`,
+                    color: theme.palette.primary.main,
+                  }}
+                  onClick={() => handleNavLinkClick(link.pageName)}
+                  onMouseEnter={() => handleMouseEnter(link.text)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {link.text}
+                </NavLink>
+              ))}
+            </div>
+          )}
         </div>
-      </Toolbar>
-      {heroPage && <HeroPage title={heroPage} />}
-    </div>
+      )}
+
+      <NavLink
+        to={"/"}
+        className="nav-elements"
+        activeClassName="active-link"
+        sx={{
+          marginRight: "1rem",
+          textDecoration: isHomePage && isHovered ? "underline" : "none",
+          color: "#373737",
+        }}
+        onClick={() => handleNavLinkClick()}
+        onMouseEnter={() => handleMouseEnter()}
+        onMouseLeave={handleMouseLeave}
+      >
+        Claudia Solis
+      </NavLink>
+
+      {/* Page NavLinks */}
+      <div className="nav-container">
+        {/* Show/hide navlinks based on state */}
+        {(!isSmallScreen || showNavLinks) && (
+          <div>
+            {navLinks.map((link) => (
+              <NavLink
+                className="nav-elements"
+                key={link.to}
+                to={link.to}
+                exact={link.to === "/"}
+                activeClassName="active-link"
+                sx={{
+                  marginRight: "1rem",
+                  textDecoration:
+                    isHomePage && hoveredNavLink === link.text
+                      ? "underline"
+                      : "none",
+                  animation: `0.3s ease-in-out`,
+                  display: { xs: "none", md: "initial" },
+                  color: theme.palette.primary.main,
+                }}
+                onClick={() => handleNavLinkClick(link.pageName)}
+                onMouseEnter={() => handleMouseEnter(link.text)}
+                onMouseLeave={handleMouseLeave}
+              >
+                {link.text}
+              </NavLink>
+            ))}
+          </div>
+        )}
+      </div>
+    </Toolbar>
+    {heroPage && <HeroPage title={heroPage} />}
+  </div>
   );
 }

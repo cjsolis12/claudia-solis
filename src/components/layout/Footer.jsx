@@ -6,14 +6,16 @@ import { HiOutlineMail } from "react-icons/hi";
 
 export default function Footer() {
   return (
-    <div className="navbar">
+    <>
     <Box
       sx={{
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        padding: "1rem",
+       
+        marginTop: "5rem",
+ 
       }}
     >
       <Box
@@ -48,6 +50,6 @@ export default function Footer() {
         </NavLink>
       </Box>
     </Box>
-    </div>
+    </>
   );
 }

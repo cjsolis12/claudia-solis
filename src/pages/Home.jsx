@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useHoveredNavLinkContext } from "../components/ui/HoveredNavLinkContext";
 import { Box } from "@mui/system";
+import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
@@ -39,18 +40,21 @@ export default function Home() {
   console.log("headerImage", headerImage);
 
   return (
-    <div>
-      <div className="hero-container">
-        <div className="home-img">
-          {" "}
+    <>
+      <div className="hero-section">
+        <div className="hero-container">
+          <div className="overlay-text">
+            <h1>Claudia Solis</h1>
+            <p>Full Stack Web Developer</p>
+            <Box sx={{display: "flex", justifyContent: "center", color: "#C7A6C5", margin:"5px"}}>
+            <Button variant="contained" sx={{backgroundColor: "#C7A6C5", margin:"5px"}}>Resume</Button>
+            <Button variant="contained" sx={{backgroundColor: "#C7A6C5", margin:"5px"}}>Github</Button>
+            </Box>
+          </div>
           <img src={headerImage} alt="Header Image" className="header-images" />
-        </div>
-
-        <div class="overlay-text">
-          <h1>Claudia Solis</h1>
-          <p>Full Stack Web Developer</p>
+          <div className="svg-decoration"></div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

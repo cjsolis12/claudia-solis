@@ -124,6 +124,7 @@ export default function Work() {
                       marginLeft: "30px",
                     }}
                   >
+                 
                     <Typography
                       variant="subtitle1"
                       style={{ color: "#fff", fontSize: "20px" }}

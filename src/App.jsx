@@ -2,8 +2,6 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Box, Container } from "@mui/system";
 
-
-
 //Components
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -15,17 +13,10 @@ import Work from "./pages/Work";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 
-
 function App() {
   return (
     <>
-   
-      <Container
-        maxWidth="xl"
-        boxSizing="border-box"
-        height="100vh"
-        sx={{  display:"flex", flexDirection: "column" }}
-      >
+      <Container height="100vh">
         <Navbar />
         <Routes>
           <Route path="" element={<Home />} />
@@ -34,9 +25,8 @@ function App() {
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Container>
-     
     </>
   );
 }

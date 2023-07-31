@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Grid, Typography } from "@mui/material";
-import image2 from "../assets/me2.jpg";
+
+import aboutme2 from "../assets/aboutme2.jpg"
 import { RevealRight } from "../animations/RevealRight";
 import { RevealLeft } from "../animations/RevealLeft";
 
@@ -15,7 +16,7 @@ export default function About() {
                 textAlign: "left",
                 fontWeight: "normal"
                   
-                }}>Hi, I'm Claudia Solis! A fullstack developer in the making.</Typography>
+                }}>Hi, I'm Claudia Solis! A fullstack developer.</Typography>
 
           <Typography variant="h6" style={{ textAlign: "left", fontSize:"18px", fontWeight: "100", color: '#373737' }}>
             With a passion for learning and creativity, I made the leap from
@@ -30,7 +31,7 @@ export default function About() {
           <Grid container spacing={4}>
             <Grid item xs={12}>
               <img
-                src={image2}
+                src={aboutme2}
                 alt="personal photo"
                 style={{
                   width: "100%",

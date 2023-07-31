@@ -1,85 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;0,700;1,100;1,200;1,300&display=swap');
+
 :root {
-font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
   text-decoration: none;
   margin: 10px;
 }
+
 a:hover {
   color: #535bf2;
 }
 
 body {
   margin: 0;
-
 }
 
 /* Header and Navbar Section */
-
-.navbar{
+.navbar {
   color: '#373737';
   font-weight: 300;
 }
 
-.hero{
+/* Page titles */
+.hero {
   margin: 4rem 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color:#373737;
+  color: #373737;
   font-size: 30px;
-
 }
 
-.hero-container{
+/* Hero Section for HomePage */
+
+.hero-section {
   position: relative;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  justify-content: end;
-  margin: 20px;
+  background-color: #373737;
+  padding: 100px 0;
 }
 
-.home-img:before{
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #c7a6c5;
-}
-
-.home-img{
-  position: relative;
-  width: 50%;
-  overflow: hidden;
-
-}
-.header-images{
- object-fit: cover;
- height: auto;
- width: 100%;
- opacity: 0.5;
- transition:  opacity 0.3s ease-in-out ;
-
-}
-
-.overlay-text{
+.overlay-text {
   position: absolute;
   top: 50%;
   left: 10%;
-  transform:  translate(50%, -50%);
-  color: #373737;
-  font-size: 25px;
-}
-.overlay-text h1,
-.overlay-text p {
-  margin: 0; 
+  transform: translateY(-50%);
+  color: #fff;
+  z-index: 1;
 }
 
+.overlay-text h1 {
+  font-size: 4rem;
+}
+
+.overlay-text p {
+  font-size: 1.5rem
+}
+
+.header-images {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-left: auto;
+}
+
+.svg-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/hero.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .overlay-text {
+    left: 50%;
+    /* Center the text horizontally on small screens */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* Align the text to the center */
+  }
+}
 
 
 /* Define the animation stages */
@@ -87,6 +96,7 @@ body {
   from {
     width: 0%;
   }
+
   to {
     width: 100%;
   }
@@ -95,22 +105,22 @@ body {
 /* animation to navlinks */
 
 .nav-elements {
-  position: relative; 
+  position: relative;
   font-size: larger;
 }
 
 .nav-elements::after {
-  content: ""; 
-  position: absolute; 
-  bottom: -5px; 
-  left: 0; 
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
   height: 1px;
-  background-color: #169086; 
+  background-color: #169086;
   width: 0%;
 
 }
 
-.nav-elements:hover::after{
+.nav-elements:hover::after {
   width: 100%;
-  animation: underline 0.5s ease-out forwards; 
+  animation: underline 0.5s ease-out forwards;
 }
