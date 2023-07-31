@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { Box } from "@mui/system";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
@@ -9,11 +8,18 @@ export default function Footer() {
   return (
     <>
       <Box
-        sx={{
-          py: 3,
-          px: 2,
-          mt: "auto",
-        }}
+      component="footer"
+      sx={{
+        p: 2,
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        width: "100%",
+        backgroundColor: "#C7A6C5",
+        display: "flex",
+        justifyContent: "center",
+        gap: "20px", 
+      }}
       >
         <Container maxWidth="sm">
           <Link activeClassName="active-link" href="" target="_blank" rel="noopener">

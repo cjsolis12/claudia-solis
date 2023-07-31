@@ -19,7 +19,7 @@ const theme = createTheme({
       main: Colors.charcoal,
     },
     secondary: {
-      main: Colors.teal,
+      main: Colors.lilac,
     },
   },
   components:{
