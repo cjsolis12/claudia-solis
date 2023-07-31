@@ -1,13 +1,13 @@
 import * as React from "react";
 import { Grid, Typography } from "@mui/material";
-
+import {Colors} from '../styles/theme/index'
 import aboutme2 from "../assets/aboutme2.jpg"
 import { RevealRight } from "../animations/RevealRight";
 import { RevealLeft } from "../animations/RevealLeft";
 
 export default function About() {
   return (
-    <Grid container spacing={8} marginBottom={5} paddingTop={5}>
+    <Grid container spacing={8} marginBottom={5} paddingTop={5}  sx={{ maxWidth: "100vw" }}>
       {/* first row */}
       <Grid item xs={12} sm={6} container alignItems="center" justifyContent="center">
         <RevealLeft>
