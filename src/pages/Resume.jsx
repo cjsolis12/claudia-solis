@@ -1,5 +1,7 @@
 import * as React from "react";
+import {Colors} from '../styles/theme/index'
 import { Button, Paper } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
 import StorageRoundedIcon from "@mui/icons-material/StorageRounded";
@@ -31,14 +33,12 @@ export default function Resume() {
       </Grid> */}
 
       {/* Front End Skills */}
-      <Grid item xs={12} md={4} sx={{ padding: "16px" }}>
+      <Grid item xs={12} md={4} sx={{ padding: "16px", alignItems: "center" }}>
         <Grow in={true} easing="ease-in-out" timeout={800}>
-          <Paper>
-            {" "}
-            <div>
-              {" "}
+          <Paper sx={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "16px" }}>
+            <Avatar>
               <DevicesOutlinedIcon />
-            </div>
+            </Avatar>
             <h4>Front End Skills</h4>
           </Paper>
         </Grow>
@@ -47,11 +47,10 @@ export default function Resume() {
       {/* Back End Skills */}
       <Grid item xs={12} md={4} sx={{ textAlign: "center", padding: "16px" }}>
         <Grow in={true} easing="ease-in-out" timeout={900}>
-          <Paper>
-            <div>
-              {" "}
-              <StorageRoundedIcon size={48} />
-            </div>
+          <Paper sx={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "16px"}}>
+            <Avatar>
+              <StorageRoundedIcon />
+            </Avatar>
             <h4>Backend Skills </h4>
           </Paper>
         </Grow>
@@ -60,11 +59,10 @@ export default function Resume() {
       {/* Other */}
       <Grid item xs={12} md={4} sx={{ textAlign: "center", padding: "16px" }}>
         <Grow in={true} easing="ease-in-out" timeout={1000}>
-          <Paper>
-            <div>
-              {" "}
-              <PsychologyRoundedIcon size={48} />
-            </div>
+          <Paper sx={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "16px"}}>
+            <Avatar>
+              <PsychologyRoundedIcon />
+            </Avatar>
             <h4>Cross-Industry Experience </h4>
           </Paper>
         </Grow>
