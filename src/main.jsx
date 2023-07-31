@@ -7,6 +7,7 @@ import { HoveredNavLinkProvider } from "./components/ui/HoveredNavLinkContext.js
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./styles/theme/index";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider theme={theme}>
     <BrowserRouter>

@@ -1,13 +1,40 @@
-import * as React from "react";
 import { Paper, TextField, Box, Button } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import contactForm from "../assets/contactForm.jpg";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+// For Email
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 export default function Contact() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  //Email Functions
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const user_email = e.target.elements.user_email.value;
+
+    emailjs
+      .sendForm(
+        "service_b49i52f",
+        "template_dbj0gog",
+        form.current,
+        "g3ShUZPhcjLjaPsm_"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <Paper
       elevation={3}
@@ -28,6 +55,8 @@ export default function Contact() {
       />
       <Box
         component="form"
+        ref={form}
+        onSubmit={sendEmail}
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -43,14 +72,14 @@ export default function Contact() {
       >
         <TextField
           type="text"
-          name="name"
+          name="from_name"
           label="Name"
           variant="standard"
           required
         />
         <TextField
           type="email"
-          name=""
+          name="user_email"
           label="Email Address"
           variant="standard"
           required
@@ -59,11 +88,12 @@ export default function Contact() {
         <TextField
           name="message"
           type="text"
-          rows={10}
+          rows={20}
           label="Message"
           style={{ margin: "5px" }}
         ></TextField>
         <Button
+          type="submit"
           variant="contained"
           endIcon={<SendIcon />}
           sx={{

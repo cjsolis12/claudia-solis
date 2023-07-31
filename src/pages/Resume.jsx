@@ -5,7 +5,6 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
-import Divider from "@mui/material/Divider";
 import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
 import StorageRoundedIcon from "@mui/icons-material/StorageRounded";
 import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded";
