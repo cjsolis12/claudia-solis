@@ -4,13 +4,12 @@ import { Box } from "@mui/system";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-
+import home from "../assets/color2.jpg"
 import about from "../assets/me1.jpg";
 import work from "../assets/fierce.jpg";
 import work1 from "../assets/fierce1.jpg";
 import contact from "../assets/hello.jpg";
 import resume from "../assets/resume.jpg";
-import home from "../assets/home.jpg";
 
 export default function Home() {
   const [headerImage, setHeaderImage] = React.useState(work);
