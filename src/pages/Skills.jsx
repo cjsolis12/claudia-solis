@@ -10,7 +10,7 @@ import StorageRoundedIcon from "@mui/icons-material/StorageRounded";
 import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded";
 import Grow from "@mui/material/Grow";
 
-export default function Resume() {
+export default function Skills() {
   return (
     <>
       <Grid container spacing={9} sx={{ maxHeight: "100vh" }}>

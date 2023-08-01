@@ -20,7 +20,7 @@ export default function Navbar() {
   const navLinks = [
     { to: "/about", text: "About", pageName: "About Me" },
     { to: "/work", text: "Work", pageName: "My Work" },
-    { to: "/resume", text: "Resume", pageName: "My Resume / Skills" },
+    { to: "/skills", text: "Skills", pageName: "My Skills" },
     { to: "/contact", text: "Contact", pageName: "Get in Touch" },
   ];
 
