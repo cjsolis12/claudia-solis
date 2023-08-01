@@ -97,12 +97,14 @@ a {
 @media (max-width: 768px) {
   .hero-section {
     height: 50vh;
+    padding: 0;
+    
   }
   
   .overlay-text {
     left: 50%;
     /* Center the text horizontally on small screens */
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%) translateY(-50%);
     text-align: center;
     width: 80%;
     word-break: break-word;
