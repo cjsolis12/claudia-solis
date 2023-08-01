@@ -16,6 +16,14 @@ export default function Home() {
   const [headerImage, setHeaderImage] = React.useState(work);
   const { hoveredNavLink } = useHoveredNavLinkContext();
 
+  //Resume Download
+  const handleResumeDownload = () => {
+    window.open(
+      "https://docs.google.com/document/d/1zsEbW0x16dFTWi2zpNTR1jfq_0-uqW4orMeG2kbzjFs/edit?usp=sharing",
+      "_blank"
+    );
+  };
+
   React.useEffect(() => {
     // Use a switch statement to set the header image based on the hoveredNavLink
     console.log("hovered Navlink", hoveredNavLink);
@@ -46,12 +54,38 @@ export default function Home() {
           <div className="overlay-text">
             <h1>Claudia Solis</h1>
             <p>Full Stack Web Developer</p>
-            <Box sx={{display: "flex", justifyContent: "center", color: "#C7A6C5", margin:"5px"}}>
-            <Button variant="contained" sx={{backgroundColor: "#C7A6C5", margin:"5px"}}>Resume</Button>
-            <Button variant="contained" sx={{backgroundColor: "#C7A6C5", margin:"5px"}}>Github</Button>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                color: "#C7A6C5",
+              
+              }}
+            >
+              <Button
+                variant="contained"
+                sx={{ backgroundColor: "#C7A6C5", marginRight: "5px", height: "2rem" }}
+                onClick={handleResumeDownload}
+              >
+                Resume
+              </Button>
+              <Button
+                variant="contained"
+                sx={{ backgroundColor: "#C7A6C5",marginLeft: "5px", height: "2rem" }}
+              >
+                {" "}
+                <a
+                  href="https://github.com/cjsolis12"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  Github
+                </a>
+              </Button>
             </Box>
           </div>
-          
+
           <img src={headerImage} alt="Header Image" className="header-images" />
           <div className="svg-decoration"></div>
         </div>

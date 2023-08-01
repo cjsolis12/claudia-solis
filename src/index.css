@@ -100,7 +100,6 @@ a {
   .hero-section {
     height: 50vh;
     padding: 0;
-    
   }
   
   .overlay-text {
@@ -108,7 +107,7 @@ a {
     /* Center the text horizontally on small screens */
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
-    width: 80%;
+    width: 90%;
     word-break: break-word;
   }
     .header-images{
