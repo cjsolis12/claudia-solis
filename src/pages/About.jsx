@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Grid, Typography } from "@mui/material";
 import {Colors} from '../styles/theme/index'
-
+import PageLayout from "../components/layout/PageLayouts";
 import color1 from "../assets/color1.jpg"
 import { RevealRight } from "../animations/RevealRight";
 import { RevealLeft } from "../animations/RevealLeft";
@@ -9,6 +9,7 @@ import { RevealLeft } from "../animations/RevealLeft";
 
 export default function About() {
   return (
+    <PageLayout>
     <Grid container spacing={8} marginBottom={10} paddingTop={5} sx={{ maxWidth: "100vw" }}>
     {/* First Column */}
     <Grid item xs={12} sm={6} container alignItems="center" paddingBottom={4}>
@@ -19,7 +20,7 @@ export default function About() {
           fontWeight: "normal",
           paddingBottom: "2rem"
         }}>
-          Hi, I'm Claudia Solis! A fullstack developer.
+          Hi, I'm Claudia Solis! <span style={{ color: '#D0CE27' }}>A fullstack web developer.</span>
         </Typography>
   
         <Typography variant="body1" style={{ textAlign: "left", fontSize: "20px", fontWeight: "100", color: '#373737' }}>
@@ -56,6 +57,7 @@ export default function About() {
       </RevealRight>
     </Grid>
   </Grid>
+  </PageLayout>
   
   );
 }
