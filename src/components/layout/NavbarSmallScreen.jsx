@@ -45,6 +45,7 @@ export default function NavbarSmallScreen() {
           justifyContent: "space-between",
           alignItems: "center",
           color: "#373737",
+          margin: "3rem"
         }}
       >
         {/* Hamburger menu for small screens */}
@@ -71,8 +72,8 @@ export default function NavbarSmallScreen() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            background: "#fff",
             opacity:".9",
+            backdropFilter: "blur(30px)",
             zIndex: "1", 
           }}
           >
