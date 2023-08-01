@@ -61,11 +61,13 @@ a {
 .overlay-text h1 {
   font-size: 8vw;
   font-weight: 200;
+  margin-bottom: 0.5rem;
 }
 
 .overlay-text p {
   font-size: 3vw;
   font-weight: 200;
+  margin-top: 0.5rem;
 }
 
 .header-images {
