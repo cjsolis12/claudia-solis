@@ -68,6 +68,7 @@ export default function Navbar() {
           justifyContent: "space-between",
           alignItems: "center",
           color: "#373737",
+          margin: "3rem"
         }}
       >
         {/* Name as Logo in Navbar */}
