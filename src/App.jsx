@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 //Components
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import PageLayout from "./components/layout/PageLayouts";
 
 // Main Pages
 import Home from "./pages/Home";
@@ -17,6 +18,7 @@ function App() {
     <>
       <div className="main-container">
         <Navbar />
+        <PageLayout>
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="about" element={<About />} />
@@ -24,6 +26,7 @@ function App() {
           <Route path="skills" element={<Skills/>} />
           <Route path="contact" element={<Contact />} />
         </Routes>
+        </PageLayout>
         <Footer />
       </div>
     </>

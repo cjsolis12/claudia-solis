@@ -5,6 +5,7 @@ import aboutme2 from "../assets/aboutme2.jpg"
 import { RevealRight } from "../animations/RevealRight";
 import { RevealLeft } from "../animations/RevealLeft";
 
+
 export default function About() {
   return (
     <Grid container spacing={8} marginBottom={5} paddingTop={5}  sx={{ maxWidth: "100vw" }}>
