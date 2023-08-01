@@ -22,7 +22,7 @@ export default function NavbarSmallScreen() {
   ];
 
   const handleNavLinkClick = (pageName) => {
-    setHeroPage(pageName)
+    setHeroPage(pageName);
     setShowNavLinks(false);
   };
 
@@ -37,7 +37,6 @@ export default function NavbarSmallScreen() {
     setShowNavLinks((prevShowNavLinks) => !prevShowNavLinks);
   };
 
-
   return (
     <div className="navbar">
       <Toolbar
@@ -49,7 +48,7 @@ export default function NavbarSmallScreen() {
         }}
       >
         {/* Hamburger menu for small screens */}
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div style={{ position:"absolute",  left: "0", top: "50%", transform: "translateY(-50%)" }}>
           <IconButton
             edge="start"
             color="inherit"
@@ -61,38 +60,44 @@ export default function NavbarSmallScreen() {
           >
             <MenuIcon />
           </IconButton>
-          {/* Render navLinks as a column under the icon when showNavLinks is true */}
-          {showNavLinks && (
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
-                  exact={link.to === "/"}
-                  activeClassName="active-link"
-                  sx={{
-                    textDecoration:
-                      isHomePage && hoveredNavLink === link.text
-                        ? "underline"
-                        : "none",
-                    animation: `0.3s ease-in-out`,
-                  }}
-                  onClick={() => handleNavLinkClick(link.pageName)}
-                  onMouseEnter={() => handleMouseEnter(link.text)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {link.text}
-                </NavLink>
-              ))}
-            </div>
-          )}
         </div>
+        {/* Render navLinks as a column under the icon when showNavLinks is true */}
+        {showNavLinks && (
+          <div
+          style={{
+            position: "absolute",
+            top: "100%",
+            
+            transform: "translateX(-50%)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            background: "#fff",
+            zIndex: "1", 
+          }}
+          >
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                exact={link.to === "/"}
+                activeClassName="active-link"
+                sx={{
+                  textDecoration:
+                    isHomePage && hoveredNavLink === link.text
+                      ? "underline"
+                      : "none",
+                  animation: `0.3s ease-in-out`,
+                }}
+                onClick={() => handleNavLinkClick(link.pageName)}
+                onMouseEnter={() => handleMouseEnter(link.text)}
+                onMouseLeave={handleMouseLeave}
+              >
+                {link.text}
+              </NavLink>
+            ))}
+          </div>
+        )}
       </Toolbar>
       {heroPage && <HeroPage title={heroPage} />}
     </div>
