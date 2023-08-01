@@ -3,11 +3,17 @@
 :root {
   font-family: 'Poppins', sans-serif;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+
 
 .main-container{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 a {
@@ -38,6 +44,9 @@ a {
   position: relative;
   background-color: #373737;
   padding: 5vw;
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .overlay-text {
