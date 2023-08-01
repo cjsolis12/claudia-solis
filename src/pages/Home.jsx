@@ -18,10 +18,9 @@ export default function Home() {
 
   //Resume Download
   const handleResumeDownload = () => {
-    window.open(
-      "https://docs.google.com/document/d/1zsEbW0x16dFTWi2zpNTR1jfq_0-uqW4orMeG2kbzjFs/edit?usp=sharing",
-      "_blank"
-    );
+    const fileUrl =
+    "https://docs.google.com/document/d/1zsEbW0x16dFTWi2zpNTR1jfq_0-uqW4orMeG2kbzjFs/export?format=pdf";
+    window.open(fileUrl);
   };
 
   React.useEffect(() => {
