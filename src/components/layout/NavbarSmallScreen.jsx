@@ -67,12 +67,12 @@ export default function NavbarSmallScreen() {
           style={{
             position: "absolute",
             top: "100%",
-            
             transform: "translateX(-50%)",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             background: "#fff",
+            opacity:".9",
             zIndex: "1", 
           }}
           >

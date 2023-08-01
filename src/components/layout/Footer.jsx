@@ -10,18 +10,15 @@ export default function Footer() {
       <Box
       component="footer"
       sx={{
-        p: 2,
-        position: "fixed",
-        bottom: 0,
-        left: 0,
-        width: "100%",
         backgroundColor: "#C7A6C5",
         display: "flex",
         justifyContent: "center",
-        gap: "20px", 
+        alignItems: "center",
+        width: "100vw",
+        marginTop: "auto",
       }}
       >
-        <Container maxWidth="sm">
+        <Container maxWidth="sm" sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           <Link activeClassName="active-link" href="" target="_blank" rel="noopener"  sx={{ fontSize: "24px", margin: "10px" }}>
             <HiOutlineMail />
           </Link>
