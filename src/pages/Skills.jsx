@@ -2,24 +2,25 @@ import * as React from "react";
 import { Colors } from "../styles/theme/index";
 import { Button, Paper, Typography } from "@mui/material";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
 import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
 import StorageRoundedIcon from "@mui/icons-material/StorageRounded";
 import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded";
 import Grow from "@mui/material/Grow";
+import PageLayouts from "../components/layout/PageLayouts"
 
 export default function Skills() {
   return (
     <>
-      <Grid container spacing={9} sx={{ maxHeight: "100vh" }}>
+    <PageLayouts>
+      <Grid container spacing={9} >
         {/* Front End Skills */}
         <Grid
           item
           xs={12}
           md={4}
-          sx={{ padding: "16px", alignItems: "center" }}
+          sx={{ padding: "16px", alignItems: "center", justifyContent:"center" }}
         >
           <Grow in={true} easing="ease-in-out" timeout={1200}>
             <Paper
@@ -151,6 +152,7 @@ export default function Skills() {
           </Grow>
         </Grid>
       </Grid>
+      </PageLayouts>
     </>
   );
 }

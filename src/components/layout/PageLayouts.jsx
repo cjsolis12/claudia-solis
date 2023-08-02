@@ -5,8 +5,10 @@ const PageLayout= ({ children }) => {
     return (
       <Box
         sx={{
+        
           margin: "auto", 
-          padding: "3rem"
+          padding: "3rem",
+          marginBottom:"2rem"
         }}
       >
         {children}
