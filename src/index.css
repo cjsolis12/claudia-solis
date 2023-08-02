@@ -6,7 +6,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-
 .main-container{
   min-height: 100vh;
   display: flex;
@@ -35,7 +34,6 @@ a {
   font-weight: 300;
   color: #373737;
   font-size: 30px;
-  height: 60vh
 }
 
 /* Hero Section for HomePage */
