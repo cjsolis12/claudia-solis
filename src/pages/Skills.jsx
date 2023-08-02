@@ -29,13 +29,12 @@ export default function Skills() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                paddingTop: "3rem",
                 padding: "8px",
-                minHeight: "300px",
+                minHeight: "100%",
                 width: "100%",
               }}
             >
-              <Avatar sx={{ backgroundColor: Colors.oliveGreen }}>
+              <Avatar sx={{ backgroundColor: Colors.oliveGreen, marginTop: "2rem" }}>
                 <DevicesOutlinedIcon />
               </Avatar>
 
@@ -44,6 +43,7 @@ export default function Skills() {
                 level="body3"
                 textTransform="uppercase"
                 fontWeight="600"
+                marginTop={2}
               >
                 Front End Skills
               </Typography>
@@ -77,11 +77,11 @@ export default function Skills() {
                 paddingTop: "3rem",
                 alignItems: "center",
                 padding: "8px",
-                minHeight: "300px",
+                minHeight: "100%",
                 width: "100%",
               }}
             >
-              <Avatar sx={{ backgroundColor: Colors.oliveGreen }}>
+              <Avatar sx={{ backgroundColor: Colors.oliveGreen, marginTop: "2rem" }}>
                 <StorageRoundedIcon />
               </Avatar>
               <Typography
@@ -89,6 +89,7 @@ export default function Skills() {
                 level="body3"
                 textTransform="uppercase"
                 fontWeight="600"
+                marginTop={2}
               >
                 Back End Skills
               </Typography>
@@ -116,15 +117,14 @@ export default function Skills() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-       
                 alignItems: "center",
                 padding: "8px",
-                minHeight: "300px",
+                minHeight: "100%",
                 width: "100%",
              
               }}
             >
-              <Avatar sx={{ backgroundColor: Colors.oliveGreen }}>
+              <Avatar sx={{ backgroundColor: Colors.oliveGreen, marginTop: "2rem"  }}>
                 <PsychologyRoundedIcon />
               </Avatar>
               <Typography
@@ -132,6 +132,7 @@ export default function Skills() {
                 level="body3"
                 textTransform="uppercase"
                 fontWeight="600"
+                marginTop={2}
               >
                 Cross-Industry Experience
               </Typography>
@@ -142,11 +143,13 @@ export default function Skills() {
                   "& .MuiListItem-dense": { paddingTop: 0, paddingBottom: 0 },
                 }}
               >
-                <Typography >Node JS</Typography>
-                <Typography>Express</Typography>
-                <Typography>GraphQL</Typography>
-                <Typography>Mongo DB</Typography>
-                <Typography>MySQL</Typography>
+                <Typography >Patience</Typography>
+                <Typography >Communication</Typography>
+                <Typography>Collaboration</Typography>
+                <Typography>Meets Deadlines</Typography>
+                <Typography>Active listening</Typography>
+                <Typography>Attention to detail</Typography>
+                <Typography>Professionalism</Typography>
               </List>
             </Paper>
           </Grow>
