@@ -3,6 +3,7 @@ import SendIcon from "@mui/icons-material/Send";
 import contactForm from "../assets/contactForm.jpg";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import PageLayouts from "../components/layout/PageLayouts";
 
 // For Email
 import React, { useRef } from "react";
@@ -36,91 +37,93 @@ export default function Contact() {
       );
   };
   return (
-    <Paper
-      elevation={3}
-      sx={{
-        display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        justifyContent: "center",
-        alignItems: "center",
-        height: { xs: "90vh", md: "60vh" },
-        width: { xs: "80vw", md: "auto" },
-        margin: "0 auto",
-        padding: "50px 40px",
-        boxSizing: "border-box",
-      }}
-    >
-      {/* Container for the image */}
-      <Box
+    <PageLayouts>
+      <Paper
+        elevation={3}
         sx={{
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          marginRight: { xs: 0, md: "20px" },
-          marginBottom: { xs: "20px", md: 0 },
-          width: "100%",
-        }}
-      >
-        <img
-          src={contactForm}
-          alt="contact"
-          style={{ width: "300px", height: "200px", objectFit: "contain" }}
-        />
-      </Box>
-
-      {/* Container for the form*/}
-      <Box
-        component="form"
-        ref={form}
-        onSubmit={sendEmail}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: "center",
           alignItems: "center",
-          margin: "15px",
-          "& .MuiTextField-root": { m: 2, width: "100%" },
-          "& .MuiButton-root": { mt: 4 },
-          width: "100%",
+          height: { xs: "90vh", md: "60vh" },
+          width: { xs: "80vw", md: "auto" },
+          margin: "0 auto",
+          padding: "50px 40px",
+          boxSizing: "border-box",
         }}
-        noValidate
-        autoComplete="off"
-        variant="outlined"
       >
-        <TextField
-          type="text"
-          name="from_name"
-          label="Name"
-          variant="standard"
-          required
-        />
-        <TextField
-          type="email"
-          name="user_email"
-          label="Email Address"
-          variant="standard"
-          required
-        />
-
-        <TextField
-          name="message"
-          type="text"
-          multiline
-          rows={5}
-          label="Message"
-          style={{ margin: "5px" }}
-        ></TextField>
-        <Button
-          type="submit"
-          variant="contained"
-          endIcon={<SendIcon />}
+        {/* Container for the image */}
+        <Box
           sx={{
-            backgroundColor: "#D0CE27",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginRight: { xs: 0, md: "20px" },
+            marginBottom: { xs: "20px", md: 0 },
+            width: "100%",
           }}
         >
-          Send
-        </Button>
-      </Box>
-    </Paper>
+          <img
+            src={contactForm}
+            alt="contact"
+            style={{ width: "300px", height: "200px", objectFit: "contain" }}
+          />
+        </Box>
+
+        {/* Container for the form*/}
+        <Box
+          component="form"
+          ref={form}
+          onSubmit={sendEmail}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "15px",
+            "& .MuiTextField-root": { m: 2, width: "100%" },
+            "& .MuiButton-root": { mt: 4 },
+            width: "100%",
+          }}
+          noValidate
+          autoComplete="off"
+          variant="outlined"
+        >
+          <TextField
+            type="text"
+            name="from_name"
+            label="Name"
+            variant="standard"
+            required
+          />
+          <TextField
+            type="email"
+            name="user_email"
+            label="Email Address"
+            variant="standard"
+            required
+          />
+
+          <TextField
+            name="message"
+            type="text"
+            multiline
+            rows={5}
+            label="Message"
+            style={{ margin: "5px" }}
+          ></TextField>
+          <Button
+            type="submit"
+            variant="contained"
+            endIcon={<SendIcon />}
+            sx={{
+              backgroundColor: "#D0CE27",
+            }}
+          >
+            Send
+          </Button>
+        </Box>
+      </Paper>
+    </PageLayouts>
   );
 }
