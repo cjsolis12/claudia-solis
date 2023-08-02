@@ -20,7 +20,7 @@ export default function Skills() {
           item
           xs={12}
           md={4}
-          sx={{ padding: "16px", alignItems: "center", justifyContent:"center" }}
+          sx={{textAlign: "center", padding: "16px"  }}
         >
           <Grow in={true} easing="ease-in-out" timeout={1200}>
             <Paper
@@ -74,7 +74,6 @@ export default function Skills() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                paddingTop: "3rem",
                 alignItems: "center",
                 padding: "8px",
                 minHeight: "100%",
