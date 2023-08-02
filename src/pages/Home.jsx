@@ -2,11 +2,11 @@ import * as React from "react";
 import { useHoveredNavLinkContext } from "../components/ui/HoveredNavLinkContext";
 import { Box } from "@mui/system";
 import Button from "@mui/material/Button";
-import home from "../assets/color2.jpg";
-import about from "../assets/about.jpg";
-import work1 from "../assets/fierce.jpg";
-import contact from "../assets/hello.jpg";
-import resume from "../assets/resume.jpg";
+import home from "../../src/assets/color2.jpg";
+import about from "../../src/assets/about.jpg";
+import work1 from "../../src/assets/fierce.jpg";
+import contact from "../../src/assets/hello.jpg";
+import resume from "../../src/assets/resume.jpg";
 
 export default function Home() {
   const [headerImage, setHeaderImage] = React.useState(work1);
