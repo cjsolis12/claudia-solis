@@ -1,4 +1,5 @@
 import * as React from "react";
+import PageLayout from "../components/layout/PageLayouts";
 
 import { Grid, Typography, Box, IconButton } from "@mui/material";
 import projectData from "../data/ProjectData";
@@ -20,7 +21,7 @@ export default function Work() {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center", padding: "5rem" }}>
         <Grid container sm={12} md={12} spacing={6} justifyContent="center">
           {projectData.map((item, index) => (
             <Grid
@@ -124,7 +125,6 @@ export default function Work() {
                       marginLeft: "30px",
                     }}
                   >
-                 
                     <Typography
                       variant="subtitle1"
                       style={{ color: "#fff", fontSize: "20px" }}
