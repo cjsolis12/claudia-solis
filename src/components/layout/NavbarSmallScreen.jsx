@@ -45,17 +45,32 @@ export default function NavbarSmallScreen() {
           justifyContent: "space-between",
           alignItems: "center",
           color: "#373737",
-          margin: "3rem"
+          margin: "3rem",
         }}
       >
         {/* Hamburger menu for small screens */}
-        <div style={{ position:"absolute",  left: "0", top: "50%", transform: "translateY(-50%)" }}>
+        <div
+          style={{
+            position: "absolute",
+            left: "0",
+            top: "50%",
+            transform: "translateY(-50%)",
+          }}
+        >
           <IconButton
             edge="start"
             color="inherit"
             aria-label="menu"
             sx={{
               display: { xs: "block", md: "none" },
+              borderRadius: "50%",
+              backgroundColor: "#C7A6C5",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "2.5rem", 
+              height: "2.5rem",
+              boxShadow:"0px 3px 5px rgba(0, 0, 0, 0.2)"
+              
             }}
             onClick={handleMenuClick}
           >
@@ -65,17 +80,17 @@ export default function NavbarSmallScreen() {
         {/* Render navLinks as a column under the icon when showNavLinks is true */}
         {showNavLinks && (
           <div
-          style={{
-            position: "absolute",
-            top: "100%",
-            transform: "translateX(-50%)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            opacity:".9",
-            backdropFilter: "blur(30px)",
-            zIndex: "1", 
-          }}
+            style={{
+              position: "absolute",
+              top: "100%",
+              transform: "translateX(-50%)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              opacity: ".9",
+              backdropFilter: "blur(30px)",
+              zIndex: "1",
+            }}
           >
             {navLinks.map((link) => (
               <NavLink
@@ -97,6 +112,7 @@ export default function NavbarSmallScreen() {
                 {link.text}
               </NavLink>
             ))}
+            
           </div>
         )}
       </Toolbar>
