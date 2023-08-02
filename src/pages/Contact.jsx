@@ -4,6 +4,8 @@ import contactForm from "../assets/contactForm.jpg";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import PageLayouts from "../components/layout/PageLayouts";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // For Email
 import React, { useRef } from "react";
@@ -15,6 +17,14 @@ export default function Contact() {
 
   //Email Functions
   const form = useRef();
+
+  // Function to show toast notification
+  const notifySuccess = () => {
+    toast.success("Email sent successfully!", {
+      position: toast.POSITION.BOTTOM_CENTER,
+      autoClose: 2000,
+    });
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,6 +40,7 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
+          notifySuccess();
         },
         (error) => {
           console.log(error.text);
@@ -123,6 +134,7 @@ export default function Contact() {
             Send
           </Button>
         </Box>
+        <ToastContainer></ToastContainer>
       </Paper>
     </PageLayouts>
   );
