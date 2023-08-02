@@ -2,17 +2,14 @@ import * as React from "react";
 import { useHoveredNavLinkContext } from "../components/ui/HoveredNavLinkContext";
 import { Box } from "@mui/system";
 import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import home from "../assets/color2.jpg";
-import about from "../assets/me1.jpg";
-import work from "../assets/fierce.jpg";
-import work1 from "../assets/fierce1.jpg";
+import about from "../assets/about.jpg";
+import work1 from "../assets/fierce.jpg";
 import contact from "../assets/hello.jpg";
 import resume from "../assets/resume.jpg";
 
 export default function Home() {
-  const [headerImage, setHeaderImage] = React.useState(work);
+  const [headerImage, setHeaderImage] = React.useState(work1);
   const { hoveredNavLink } = useHoveredNavLinkContext();
 
   //Resume Download
@@ -32,7 +29,7 @@ export default function Home() {
       case "Work":
         setHeaderImage(work1);
         break;
-      case "Resume":
+      case "Skills":
         setHeaderImage(resume);
         break;
       case "Contact":

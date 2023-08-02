@@ -67,10 +67,9 @@ export default function NavbarSmallScreen() {
               backgroundColor: "#C7A6C5",
               alignItems: "center",
               justifyContent: "center",
-              width: "2.5rem", 
+              width: "2.5rem",
               height: "2.5rem",
-              boxShadow:"0px 3px 5px rgba(0, 0, 0, 0.2)"
-              
+              boxShadow: "0px 3px 5px rgba(0, 0, 0, 0.2)",
             }}
             onClick={handleMenuClick}
           >
@@ -112,9 +111,24 @@ export default function NavbarSmallScreen() {
                 {link.text}
               </NavLink>
             ))}
-            
           </div>
         )}
+        {/* Name as Logo in Navbar */}
+        <NavLink
+          to={"/"}
+          className="nav-elements"
+          activeClassName="active-link"
+          sx={{
+            marginRight: "1rem",
+            textDecoration: isHomePage && isHovered ? "underline" : "none",
+            color: "#373737",
+          }}
+          onClick={() => handleNavLinkClick()}
+          onMouseEnter={() => handleMouseEnter()}
+          onMouseLeave={handleMouseLeave}
+        >
+          Claudia Solis
+        </NavLink>
       </Toolbar>
       {heroPage && <HeroPage title={heroPage} />}
     </div>
