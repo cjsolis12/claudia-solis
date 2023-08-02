@@ -29,7 +29,6 @@ export default function Work() {
               xs={12}
               sm={6}
               key={item.id}
-              style={{ height: "300px", width: "200px" }}
             >
               <motion.div
                 style={{
@@ -46,8 +45,8 @@ export default function Work() {
                   src={item.img}
                   alt={item.alt}
                   style={{
-                    maxWidth: "100%",
-                    maxHeightheight: "100%",
+                    width: "100%",
+                    height: "100%",
                     objectFit: "cover",
                     objectPosition: "center",
                     filter: hoveredIndex === index ? "blur(5px)" : "none",
