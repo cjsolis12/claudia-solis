@@ -4,7 +4,7 @@ import { Box } from "@mui/system";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import home from "../assets/color2.jpg"
+import home from "../assets/color2.jpg";
 import about from "../assets/me1.jpg";
 import work from "../assets/fierce.jpg";
 import work1 from "../assets/fierce1.jpg";
@@ -18,7 +18,7 @@ export default function Home() {
   //Resume Download
   const handleResumeDownload = () => {
     const fileUrl =
-    "https://docs.google.com/document/d/1zsEbW0x16dFTWi2zpNTR1jfq_0-uqW4orMeG2kbzjFs/export?format=pdf";
+      "https://docs.google.com/document/d/1zsEbW0x16dFTWi2zpNTR1jfq_0-uqW4orMeG2kbzjFs/export?format=pdf";
     window.open(fileUrl);
   };
 
@@ -57,19 +57,26 @@ export default function Home() {
                 display: "flex",
                 justifyContent: "center",
                 color: "#C7A6C5",
-              
               }}
             >
               <Button
                 variant="contained"
-                sx={{ backgroundColor: "#C7A6C5", marginRight: "5px", height: "2rem" }}
+                sx={{
+                  backgroundColor: "#C7A6C5",
+                  marginRight: "5px",
+                  height: "2rem",
+                }}
                 onClick={handleResumeDownload}
               >
                 Resume
               </Button>
               <Button
                 variant="contained"
-                sx={{ backgroundColor: "#C7A6C5",marginLeft: "5px", height: "2rem" }}
+                sx={{
+                  backgroundColor: "#C7A6C5",
+                  marginLeft: "5px",
+                  height: "2rem",
+                }}
               >
                 {" "}
                 <a
@@ -84,7 +91,13 @@ export default function Home() {
             </Box>
           </div>
 
-          <img src={headerImage} alt="Header Image" className="header-images" />
+          <div className="header-images-container">
+            <img
+              src={headerImage}
+              alt="Header Image"
+              className="header-images"
+            />
+          </div>
           <div className="svg-decoration"></div>
         </div>
       </div>

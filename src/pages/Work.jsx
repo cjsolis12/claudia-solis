@@ -21,15 +21,12 @@ export default function Work() {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "center", padding: "5rem" }}>
+      <div
+        style={{ display: "flex", justifyContent: "center", padding: "5rem" }}
+      >
         <Grid container sm={12} md={12} spacing={6} justifyContent="center">
           {projectData.map((item, index) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              key={item.id}
-            >
+            <Grid item xs={12} sm={6} key={item.id}>
               <motion.div
                 style={{
                   position: "relative",
