@@ -1,12 +1,13 @@
 import * as React from "react";
 import { useHoveredNavLinkContext } from "../components/ui/HoveredNavLinkContext";
-import { Box } from "@mui/system";
+import { Stack } from "@mui/system";
 import Button from "@mui/material/Button";
 import home from "../../src/assets/color2.jpg";
 import about from "../../src/assets/about.jpg";
 import work1 from "../../src/assets/fierce.jpg";
 import contact from "../../src/assets/hello.jpg";
 import resume from "../../src/assets/resume.jpg";
+import svg from "../../src/assets/hero1.svg";
 
 export default function Home() {
   const [headerImage, setHeaderImage] = React.useState(work1);
@@ -45,23 +46,21 @@ export default function Home() {
   return (
     <>
       <div className="hero-section">
+        <div className="svg-container">
+          <img src={svg} alt="Header svg" className="hero-svg" />
+        </div>
         <div className="hero-container">
           <div className="overlay-text">
-            <h1>Claudia Solis</h1>
-            <p>Full Stack Web Developer</p>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                color: "#C7A6C5",
-              }}
-            >
+            <div>
+              <h1>Claudia Solis</h1>
+              <p>Full Stack Web Developer</p>
+            </div>
+            <div>
+            <Stack direction="row" spacing={2} alignItems="center" justifyContent="center">
               <Button
                 variant="contained"
                 sx={{
                   backgroundColor: "#C7A6C5",
-                  marginRight: "5px",
-                  height: "2rem",
                 }}
                 onClick={handleResumeDownload}
               >
@@ -69,25 +68,16 @@ export default function Home() {
               </Button>
               <Button
                 variant="contained"
+                href="https://github.com/cjsolis12"
                 sx={{
                   backgroundColor: "#C7A6C5",
-                  marginLeft: "5px",
-                  height: "2rem",
                 }}
               >
-                {" "}
-                <a
-                  href="https://github.com/cjsolis12"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "inherit", textDecoration: "none" }}
-                >
-                  Github
-                </a>
+                Github
               </Button>
-            </Box>
+            </Stack>
+            </div>
           </div>
-
           <div className="header-images-container">
             <img
               src={headerImage}
@@ -95,7 +85,6 @@ export default function Home() {
               className="header-images"
             />
           </div>
-          <div className="svg-decoration"></div>
         </div>
       </div>
     </>
