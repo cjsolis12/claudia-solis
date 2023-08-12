@@ -119,7 +119,7 @@ export default function NavbarSmallScreen() {
           className="nav-elements"
           activeClassName="active-link"
           sx={{
-            marginRight: "1rem",
+            marginLeft: "1rem",
             textDecoration: isHomePage && isHovered ? "underline" : "none",
             color: "#373737",
           }}

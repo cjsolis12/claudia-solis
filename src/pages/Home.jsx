@@ -7,7 +7,7 @@ import about from "../../src/assets/about.jpg";
 import work1 from "../../src/assets/fierce.jpg";
 import contact from "../../src/assets/hello.jpg";
 import resume from "../../src/assets/resume.jpg";
-import svg from "../../src/assets/hero1.svg";
+
 
 export default function Home() {
   const [headerImage, setHeaderImage] = React.useState(work1);
@@ -21,7 +21,6 @@ export default function Home() {
   };
 
   React.useEffect(() => {
-    // Use a switch statement to set the header image based on the hoveredNavLink
     console.log("hovered Navlink", hoveredNavLink);
     switch (hoveredNavLink) {
       case "About":
@@ -41,22 +40,17 @@ export default function Home() {
         break;
     }
   }, [hoveredNavLink]);
-  console.log("headerImage", headerImage);
-
   return (
     <>
       <div className="hero-section">
-        <div className="svg-container">
-          <img src={svg} alt="Header svg" className="hero-svg" />
-        </div>
         <div className="hero-container">
           <div className="overlay-text">
             <div>
-              <h1>Claudia Solis</h1>
+              <h4>Claudia Solis</h4>
               <p>Full Stack Web Developer</p>
             </div>
             <div>
-            <Stack direction="row" spacing={2} alignItems="center" justifyContent="center">
+            <Stack direction="row" spacing={2} alignItems="center" >
               <Button
                 variant="contained"
                 sx={{
@@ -78,14 +72,12 @@ export default function Home() {
             </Stack>
             </div>
           </div>
-          <div className="header-images-container">
-            <img
-              src={headerImage}
-              alt="Header Image"
-              className="header-images"
-            />
+          <div className="image">
+          <div className="image-overlay"></div>
+          <img src={headerImage} alt="Header Image" />
+            
           </div>
-        </div>
+          </div>
       </div>
     </>
   );
