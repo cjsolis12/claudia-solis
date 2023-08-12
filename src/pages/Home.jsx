@@ -8,7 +8,6 @@ import work1 from "../../src/assets/fierce.jpg";
 import contact from "../../src/assets/hello.jpg";
 import resume from "../../src/assets/resume.jpg";
 
-
 export default function Home() {
   const [headerImage, setHeaderImage] = React.useState(work1);
   const { hoveredNavLink } = useHoveredNavLinkContext();
@@ -50,34 +49,33 @@ export default function Home() {
               <p>Full Stack Web Developer</p>
             </div>
             <div>
-            <Stack direction="row" spacing={2} alignItems="center" >
-              <Button
-                variant="contained"
-                sx={{
-                  backgroundColor: "#C7A6C5",
-                }}
-                onClick={handleResumeDownload}
-              >
-                Resume
-              </Button>
-              <Button
-                variant="contained"
-                href="https://github.com/cjsolis12"
-                sx={{
-                  backgroundColor: "#C7A6C5",
-                }}
-              >
-                Github
-              </Button>
-            </Stack>
+              <Stack direction="row" spacing={2} alignItems="center">
+                <Button
+                  variant="contained"
+                  sx={{
+                    backgroundColor: "#C7A6C5",
+                  }}
+                  onClick={handleResumeDownload}
+                >
+                  Resume
+                </Button>
+                <Button
+                  variant="contained"
+                  href="https://github.com/cjsolis12"
+                  sx={{
+                    backgroundColor: "#C7A6C5",
+                  }}
+                >
+                  Github
+                </Button>
+              </Stack>
             </div>
           </div>
           <div className="image">
-          <div className="image-overlay"></div>
-          <img src={headerImage} alt="Header Image" />
-            
+            <div className="image-overlay"></div>
+            <img src={headerImage} alt="Header Image" />
           </div>
-          </div>
+        </div>
       </div>
     </>
   );
