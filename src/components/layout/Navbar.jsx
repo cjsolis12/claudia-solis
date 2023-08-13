@@ -120,9 +120,9 @@ export default function Navbar() {
         <Button
           variant="contained"
           onClick={handleResumeDownload}
-          sx={{ backgroundColor: "#C7A6C5", marginLeft: "5px", height: "2rem", justifyContent: "center" }}
+          sx={{ backgroundColor: "#C7A6C5", marginLeft: "5px", height: "2rem", display: "flex", alignItems: "center",justifyContent: "center" }}
         >
-          <PictureAsPdfIcon sx={{ margin:"10px" }}/> Resume
+          <PictureAsPdfIcon sx={{ margin:"5px" }}/> Resume
         </Button>
       </Toolbar>
       {heroPage && <HeroPage title={heroPage} />}

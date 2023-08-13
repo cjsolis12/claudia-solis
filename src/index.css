@@ -59,7 +59,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   color: #fff;
   padding: 2rem;
   left: 5px;
@@ -90,6 +89,7 @@ a {
   position: relative;
   z-index: -1;
   right: -200px;
+
 }
 
 .image img {

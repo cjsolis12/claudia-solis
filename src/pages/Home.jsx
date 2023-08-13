@@ -20,7 +20,6 @@ export default function Home() {
   };
 
   React.useEffect(() => {
-    console.log("hovered Navlink", hoveredNavLink);
     switch (hoveredNavLink) {
       case "About":
         setHeaderImage(about);
