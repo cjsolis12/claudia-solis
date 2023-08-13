@@ -23,7 +23,7 @@ export default function Nav() {
   };
   return (
     <React.Fragment>
-      <AppBar sx={{ backgroundColor: "#C7A6C5" }}>
+      <AppBar position="fixed" sx={{ backgroundColor: "#C7A6C5" }}>
         <Toolbar>
           <IconButton onClick={() => setDrawerOpen(true)} sx={{ margin: ".5rem", backgroundColor: "#D0CE27" }}>
             <MenuIcon sx={{ color: "white", fontSize: "1.5rem" }}/>
