@@ -91,7 +91,6 @@ export default function Navbar() {
               key={link.to}
               to={link.to}
               exact={link.to === "/"}
-              activeClassName="active-link"
               sx={{
                 marginRight: "1rem",
                 textDecoration:
