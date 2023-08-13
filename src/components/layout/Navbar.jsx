@@ -6,6 +6,7 @@ import {
   Typography,
   useMediaQuery,
   Button,
+  AppBar
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -53,12 +54,6 @@ export default function Navbar() {
     setHoveredNavLink(null);
   };
 
-  //Toggle the state to show/hide the navLinks on small Screens
-  const handleMenuClick = () => {
-    if (isSmallScreen) {
-      setShowNavLinks((prevShowNavLinks) => !prevShowNavLinks);
-    }
-  };
 
   return (
     <div className="navbar">

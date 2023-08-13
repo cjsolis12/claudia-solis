@@ -1,11 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
+import { UIProvider } from "./components/ui/context";
 
 //Components
 import Navbar from "./components/layout/Navbar";
-import NavbarSmallScreen from "./components/layout/NavbarSmallScreen";
+import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
-import PageLayout from "./components/layout/PageLayouts";
+import NavDrawer from "./components/layout/NavDrawer";
 
 // Main Pages
 import Home from "./pages/Home";
@@ -22,17 +23,19 @@ function App() {
   return (
     <>
       <div className="main-container">
-        {isSmallScreen ? <NavbarSmallScreen /> : <Navbar />}
+        <UIProvider>
+          {isSmallScreen ? <Nav /> : <Navbar />}
+          <NavDrawer />
+          <Routes>
+            <Route path="" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="work" element={<Work />} />
+            <Route path="skills" element={<Skills />} />
+            <Route path="contact" element={<Contact />} />
+          </Routes>
 
-        <Routes>
-          <Route path="" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="work" element={<Work />} />
-          <Route path="skills" element={<Skills />} />
-          <Route path="contact" element={<Contact />} />
-        </Routes>
-
-        <Footer />
+          <Footer />
+        </UIProvider>
       </div>
     </>
   );
