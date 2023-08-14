@@ -14,9 +14,7 @@ export default function Footer() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        bottom: '0',
-        position: 'fixed',
-        width: "100vw",
+        marginTop: "auto"
       }}
       >
         <Container maxWidth="sm" sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
