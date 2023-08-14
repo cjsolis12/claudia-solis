@@ -1,15 +1,15 @@
-import * as React from "react";
-import PageLayout from "../components/layout/PageLayouts";
-
+import  React, {useState} from "react"
 import { Grid, Typography, Box, IconButton } from "@mui/material";
 import projectData from "../data/ProjectData";
+import WorkModal from "../components/ui/WorkModal";
 import { motion, useAnimation } from "framer-motion";
 import { GitHub as GitHubIcon } from "@mui/icons-material";
 import { Link as InsertLinkIcon } from "@mui/icons-material";
-import { RevealTop } from "../animations/RevealTop";
 
 export default function Work() {
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectProject, setSelectedProject] = useState(null);
 
   const handleHoverStart = (index) => {
     setHoveredIndex(index);
@@ -19,12 +19,22 @@ export default function Work() {
     setHoveredIndex(null);
   };
 
+  const handleImageClick = (index) => {
+    setModalOpen(true);
+    setSelectedProject(projectData[index])
+  }
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setSelectedProject(null)
+  }
+
   return (
     <>
       <div
-        style={{ display: "flex", justifyContent: "center", padding: "5rem" }}
+        style={{ display: "flex", justifyContent: "center", padding: "1rem" }}
       >
-        <Grid container sm={12} md={12} spacing={6} justifyContent="center">
+        <Grid container spacing={6} justifyContent="center">
           {projectData.map((item, index) => (
             <Grid item xs={12} sm={6} key={item.id}>
               <motion.div
@@ -37,6 +47,7 @@ export default function Work() {
                 }}
                 onHoverStart={() => handleHoverStart(index)}
                 onHoverEnd={handleHoverEnd}
+                onClick={() => handleImageClick(index)}
               >
                 <motion.img
                   src={item.img}
@@ -87,6 +98,7 @@ export default function Work() {
                       color: "#fff",
                       fontSize: "20px",
                       textAlign: "center",
+                      width: "100%"
                     }}
                   >
                     {item.description}
@@ -159,6 +171,7 @@ export default function Work() {
           ))}
         </Grid>
       </div>
+      <WorkModal open={modalOpen} handleClose={handleCloseModal} project={selectProject}></WorkModal>
     </>
   );
 }
