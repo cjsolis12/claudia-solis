@@ -14,6 +14,8 @@ export default function Footer() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        bottom: '0',
+        position: 'fixed',
         width: "100vw",
       }}
       >

@@ -59,7 +59,7 @@ export default function NavDrawer() {
           ))}
         </List>
       </Drawer>
-      {heroPage && <HeroPage title={heroPage}/>}
+      {/* {heroPage && <HeroPage title={heroPage}/>} */}
     </>
   );
 }
